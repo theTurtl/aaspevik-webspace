@@ -10,7 +10,38 @@ import * as styles from "../components/index.module.css"
 const IndexPage = () => (
   <Layout>
     <Seo title="Hjem" />
-    
+    <div className="landingPageHeroView">
+      <div className="landingPageNavBar">
+        <div className="navLeft">
+          <div className="welcomeContainer">
+            <p>Hyggelig å treffe deg! :D</p>
+          </div>
+          <div className="availabilityStatus">
+            <p>Ledig</p>
+            <div className="availabilityIcon"></div>
+          </div>
+        </div>
+        <div className="navMiddle">
+          <div className="knowledgeButton">
+            <p>Min kunnskap</p>
+            <div className="accentLine"></div>
+          </div>
+          <div className="AboutButton">
+            <p>Om meg</p>
+            <div className="accentLine"></div>
+          </div>
+        </div>
+        <div className="navLeft">
+          <div className="languageMenu">
+            <p>NO</p>
+            <div className="arrowDown"></div>
+          </div>
+          <div className="contactButton">
+            <p>Kontakt</p>
+          </div>
+        </div>
+      </div>
+    </div>
     
     
   </Layout>
