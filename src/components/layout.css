@@ -84,7 +84,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .welcomeContainer {
 	border: 3px solid var(--gray);
 	max-width: max-content;
-	padding: 14px;
+	padding: 14px 18px;
 	border-radius: 16px;
 	color: var(--blackfade);
 	font-weight: 500;
@@ -182,22 +182,23 @@ p, h1, h2, h3, h4, h5, h6 {
 	display: flex;
 	max-width: max-content;
 	margin: auto;
-	gap: 160px;
+	gap: 180px;
 }
 
 .introductionView {
 	width: max-content;
-	margin: 160px 0px;
+	margin: 148px 0px;
 }
 
 .helloContainer p {
-	font-size: 24px;
+	font-size: 22px;
 }
 
 .helloContainer h1 {
-	font-size: 72px;
+	font-size: 74px;
 	font-weight: 700;
 	margin-top: 8px;
+	color: var(--blackfade);
 }
 
 .introductionDescription {
@@ -260,6 +261,7 @@ span {
 	background-color: var(--accent);
 	padding: 2px 8px;
 	border-radius: 10px;
+	border-bottom: 2px solid var(--accent);
 
 }
 
@@ -313,4 +315,27 @@ span {
 @keyframes rotater {
 	0% {transform: rotate(0deg);}
 	100% {transform: rotate(360deg);}
+}
+
+.nextButton {
+	position: absolute;
+	background-image: url(../images/nextButton.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	width: 90px;
+	height: 90px;
+	bottom: 0;
+	width: 100%;
+	margin-bottom: 64px;
+}
+
+.nextButton:hover {
+	cursor: pointer;
+	animation: enlarger 0.5s forwards infinite;
+}
+
+@keyframes enlarger {
+	0% {filter: drop-shadow(0px 0px 0px var(--blackfade))}
+	100% {filter: drop-shadow(10px 10px 0px 20px var(--blackfade))}
 }

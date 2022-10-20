@@ -70,6 +70,9 @@ const IndexPage = () => (
           </div>
         </div>
       </div>
+
+      <div className="nextButton"></div>
+      
     </div>
     
     
