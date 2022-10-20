@@ -177,3 +177,140 @@ p, h1, h2, h3, h4, h5, h6 {
 	font-weight: 600;
 	color: var(--white);
 }
+
+.frontContent {
+	display: flex;
+	max-width: max-content;
+	margin: auto;
+	gap: 160px;
+}
+
+.introductionView {
+	width: max-content;
+	margin: 160px 0px;
+}
+
+.helloContainer p {
+	font-size: 24px;
+}
+
+.helloContainer h1 {
+	font-size: 72px;
+	font-weight: 700;
+	margin-top: 8px;
+}
+
+.introductionDescription {
+	margin-top: 32px;
+	font-size: 24px;
+	max-width: 450px;
+	line-height: 1.4;
+}
+
+.introductionButtons {
+	margin-top: 64px;
+	display: flex;
+}
+
+.downloadCV {
+	background-color: var(--blackfade);
+	/*padding: 22px 48px;*/
+	padding: 24px 0px;
+	width: 220px;
+	text-align: center;
+	color: var(--white);
+	border-radius: 16px;
+	font-size: 20px;
+	font-weight: 400;
+	margin-right: 14px;
+}
+
+.portfolio {
+	position: relative;
+	background-color: var(--white);
+	padding: 24px 0px;
+	border-radius: 16px;
+	width: 220px;
+	text-align: center;
+	border: 1px solid var(--blackfade);
+}
+
+.portfolioText {
+	font-size: 20px;
+	font-weight: 400;
+	color: var(--blackfade);
+}
+
+.arrivingSoon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: var(--blackfade);
+	color: var(--white);
+	width: 106px;
+	height: 40px;
+	border-radius: 20px;
+	transform: translate(10px, -20px);
+	font-size: 14px;
+	line-height: 2.85;
+}
+
+span {
+	max-height: 2px;
+	background-color: var(--accent);
+	padding: 2px 8px;
+	border-radius: 10px;
+
+}
+
+.frontPortrait {
+	position: relative;
+	background-image: url(../images/frontPortraitBackground.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	width: 600px;
+	height: 600px;
+}
+
+.frontPicture {
+	background-image: url(../images/frontProfile2.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	width: 510px;
+	height: 510px;
+	margin: auto;
+	margin-top: 45px;
+	filter: drop-shadow(0px 0px 12px #00000025);
+}
+
+.moreAbout {
+	position: absolute;
+	background-image: url(../images/smallCircle.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	width: 180px;
+	height: 180px;
+	top: 0;
+	right: 0;
+	transform: translateX(128px);
+}
+
+.moreAboutText {
+	background-image: url(../images/moreAboutText2.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	width: 106px;
+	height: 106px;
+	margin: auto;
+	margin-top: 37px;
+	animation: rotater 5s forwards infinite;
+}
+
+@keyframes rotater {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
