@@ -14,7 +14,7 @@ const IndexPage = () => (
       <div className="landingPageNavBar">
         <div className="navLeft">
           <div className="welcomeContainer">
-            <p>Hyggelig å treffe deg! :D</p>
+            <p>Hyggelig å treffe deg! :)</p>
           </div>
           <div className="availabilityStatus">
             <p>Ledig</p>
@@ -26,12 +26,12 @@ const IndexPage = () => (
             <p>Min kunnskap</p>
             <div className="accentLine"></div>
           </div>
-          <div className="AboutButton">
+          <div className="aboutButton">
             <p>Om meg</p>
             <div className="accentLine"></div>
           </div>
         </div>
-        <div className="navLeft">
+        <div className="navRight">
           <div className="languageMenu">
             <p>NO</p>
             <div className="arrowDown"></div>
@@ -41,6 +41,8 @@ const IndexPage = () => (
           </div>
         </div>
       </div>
+
+      
     </div>
     
     
