@@ -42,7 +42,31 @@ const IndexPage = () => (
         </div>
       </div>
 
-      
+      <div className="frontContent">
+        <div className="introductionView">
+          <div className="helloContainer">
+            <p>Hei, mitt navn er</p>
+            <h1>Adrian Aspevik</h1>
+          </div>
+          <div className="introductionDescription">
+            <p>Jeg er 26 år, og er en   grafisk designer   og   frontend utvikler   basert i Bergen.</p>
+          </div>
+          <div className="introductionButtons">
+            <div className="downloadCV">
+              <p>Last ned CV</p>
+            </div>
+            <div className="portfolio">
+              <div className="arrivingSoon">
+                <p>Kommer</p>
+              </div>
+              <p>Portfolie</p>
+            </div>
+          </div>
+        </div>
+        <div className="frontPortrait">
+          
+        </div>
+      </div>
     </div>
     
     
