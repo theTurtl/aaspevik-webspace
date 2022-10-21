@@ -119,7 +119,16 @@ const IndexPage = () => (
       </div>
     </div>
     
-    
+    <div className="didYouKnowSection">
+      <div className="centerDiv">
+        <div className="didYouKnowContainer">
+          <div className="didYouText">
+            <h6>Visste du at...</h6>
+            <p>Design er noe av det første som blir lagt merke til, og knytes ofte opp mot et kundeforhold.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </Layout>
 )
 
