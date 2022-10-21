@@ -72,7 +72,51 @@ const IndexPage = () => (
       </div>
 
       <div className="nextButton"></div>
-      
+    </div>
+
+    <div className="myKnowledgeSection">
+      <div className="myKnowledgeContainer">
+        <h3>Min <span>kunnskap</span></h3>
+        <div className="knowledgeBoxes">
+          <div className="leftBoxes">
+            <div className="visuallCommunication">
+              <h6>Visuell kommunikasjon</h6>
+              <p>Grafisk design</p>
+              <p>Brandutvikling</p>
+              <p>Visuell identitet</p>
+            </div>
+            <div className="productDevelopment">
+              <h6>Produktutvikling</h6>
+              <p>Designsprint</p>
+              <p>SCRUB</p>
+              <p>Innovasjon og prototyping</p>
+              <p>Brukertesting</p>
+            </div>
+          </div>
+          <div className="middleBoxes">
+            <div className="frontendDevelopment">
+              <h6>Frontend utvikling</h6>
+              <p>Apputvikling (iOS + Android)</p>
+              <p>Webutvikling</p>
+              <p>UX ogUIX design</p>
+              <p>Responsivt og dynamisk design</p>
+              <p>Søkemotor optimalisert (SEO)</p>
+            </div>
+            <div className="myBioHook">
+              <h6>Jeg digger å<br/>bygge ting!</h6>
+              <div className="myBioButton">
+                <p>Min bio</p>
+              </div>
+            </div>
+          </div>
+          <div className="rightBox">
+            <h6>Teknologier</h6>
+            <div className="technologyGrid">
+              <div className="placeholderTech"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     
     
