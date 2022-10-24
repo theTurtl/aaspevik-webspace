@@ -166,6 +166,33 @@ const IndexPage = () => (
         </div>
       </div>
     </div>
+
+    <div className="contactHookSection">
+      <div className="contactHookContainer">
+        <div className="contactLinks">
+          <div className="contactIcons">
+            <div className="linkedIn"></div>
+            <div className="gitHub"></div>
+          </div>
+          <div className="contactEmail">
+            <p>adrian@aspevik.com</p>
+            <div className="line"></div>
+          </div>
+          <div className="contactNumber">
+            <p>+47 992 50 743</p>
+            <div className="line"></div>
+          </div>
+          <div className="contactSectionButton">
+            <p>Kontakt</p>
+          </div>
+        </div>
+        <div className="contactsByeIllustration"></div>
+      </div>
+      <div className="toTheTop">
+        <div className="arrowUp"></div>
+        <p>Til toppen</p>
+      </div>
+    </div>
   </Layout>
 )
 

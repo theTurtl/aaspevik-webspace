@@ -537,3 +537,115 @@ span {
 	width: 18px;
 	height: 18px;
 }
+
+
+/* ---------------- Contact hook section ----------------- */
+
+.contactHookSection {
+	position: relative;
+	height: 100vh;
+}
+
+.contactHookContainer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+}
+
+.contactIcons {
+	display: flex;
+	margin-bottom: 42px;
+}
+
+.linkedIn {
+	background-image: url(../images/linkedIn.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 64px;
+	height: 64px;
+	float: left;
+	margin-right: 16px;
+}
+
+.gitHub {
+	background-image: url(../images/gitHub.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 64px;
+	height: 64px;
+	float: right;
+}
+
+.contactEmail {
+	font-size: 32px;
+	color: var(--blackfade);
+	max-width: max-content;
+	margin-bottom: 32px;
+}
+
+.contactEmail p, .contactNumber p {
+	margin-bottom: 14px;
+}
+
+.line {
+	height: 10px;
+	border-radius: 4px;
+	width: 100%;
+	background-color: var(--accent);
+}
+
+.contactNumber {
+	font-size: 32px;
+	color: var(--blackfade);
+	max-width: max-content;
+	margin-bottom: 56px;
+}
+
+.contactSectionButton {
+	padding: 20px 40px;
+	border: 1px solid var(--blackfade);
+	width: max-content;
+	font-size: 22px;
+	font-weight: 500;
+	color: var(--blackfade);
+	border-radius: 16px;
+}
+
+.contactsByeIllustration {
+	background-image: url(../images/byeIllustration.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 400px;
+	height: 400px;
+	margin-left: 192px;
+}
+
+.toTheTop {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.arrowUp {
+	background-image: url(../images/nextButton.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100%;
+	height: 96px;
+	transform: rotate(180deg);
+}
+
+.toTheTop p {
+	text-align: center;
+	font-size: 22px;
+	font-weight: 700;
+	margin-top: 24px;
+	margin-bottom: 80px;
+}
+
