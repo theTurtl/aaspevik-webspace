@@ -186,7 +186,7 @@ const IndexPage = () => (
             <p>Kontakt</p>
           </div>
         </div>
-        <div className="contactsByeIllustartion"></div>
+        <div className="contactsByeIllustration"></div>
       </div>
       <div className="toTheTop">
         <div className="arrowUp"></div>

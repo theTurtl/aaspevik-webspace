@@ -564,8 +564,8 @@ span {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
-	width: 72px;
-	height: 72px;
+	width: 64px;
+	height: 64px;
 	float: left;
 	margin-right: 16px;
 }
@@ -575,8 +575,8 @@ span {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
-	width: 72px;
-	height: 72px;
+	width: 64px;
+	height: 64px;
 	float: right;
 }
 
@@ -602,13 +602,50 @@ span {
 	font-size: 32px;
 	color: var(--blackfade);
 	max-width: max-content;
+	margin-bottom: 56px;
 }
 
 .contactSectionButton {
-	padding: 28px 40px;
+	padding: 20px 40px;
 	border: 1px solid var(--blackfade);
 	width: max-content;
 	font-size: 22px;
 	font-weight: 500;
 	color: var(--blackfade);
+	border-radius: 16px;
 }
+
+.contactsByeIllustration {
+	background-image: url(../images/byeIllustration.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 400px;
+	height: 400px;
+	margin-left: 192px;
+}
+
+.toTheTop {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.arrowUp {
+	background-image: url(../images/nextButton.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100%;
+	height: 96px;
+	transform: rotate(180deg);
+}
+
+.toTheTop p {
+	text-align: center;
+	font-size: 22px;
+	font-weight: 700;
+	margin-top: 24px;
+	margin-bottom: 80px;
+}
+
