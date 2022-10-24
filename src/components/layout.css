@@ -537,3 +537,78 @@ span {
 	width: 18px;
 	height: 18px;
 }
+
+
+/* ---------------- Contact hook section ----------------- */
+
+.contactHookSection {
+	position: relative;
+	height: 100vh;
+}
+
+.contactHookContainer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+}
+
+.contactIcons {
+	display: flex;
+	margin-bottom: 42px;
+}
+
+.linkedIn {
+	background-image: url(../images/linkedIn.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 72px;
+	height: 72px;
+	float: left;
+	margin-right: 16px;
+}
+
+.gitHub {
+	background-image: url(../images/gitHub.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 72px;
+	height: 72px;
+	float: right;
+}
+
+.contactEmail {
+	font-size: 32px;
+	color: var(--blackfade);
+	max-width: max-content;
+	margin-bottom: 32px;
+}
+
+.contactEmail p, .contactNumber p {
+	margin-bottom: 14px;
+}
+
+.line {
+	height: 10px;
+	border-radius: 4px;
+	width: 100%;
+	background-color: var(--accent);
+}
+
+.contactNumber {
+	font-size: 32px;
+	color: var(--blackfade);
+	max-width: max-content;
+}
+
+.contactSectionButton {
+	padding: 28px 40px;
+	border: 1px solid var(--blackfade);
+	width: max-content;
+	font-size: 22px;
+	font-weight: 500;
+	color: var(--blackfade);
+}
