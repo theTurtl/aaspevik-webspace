@@ -6,9 +6,140 @@ import Seo from "../components/seo"
 
 const AboutMe = () => (
   <Layout>
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    <div className="aboutMePage">
+      <div className="landingPageNavBar">
+        <div className="navLeft">
+          <div className="welcomeContainer">
+            <p>Hyggelig å treffe deg! :)</p>
+          </div>
+          <div className="availabilityStatus">
+            <p>Ledig</p>
+            <div className="availabilityIcon"></div>
+          </div>
+        </div>
+        <div className="navMiddle">
+          <div className="knowledgeButton">
+            <p>Min kunnskap</p>
+            <div className="accentLine"></div>
+          </div>
+          <div className="aboutButton">
+            <p>Om meg</p>
+            <div className="accentLine"></div>
+          </div>
+        </div>
+        <div className="navRight">
+          <div className="languageMenu">
+            <p>NO</p>
+            <div className="arrowDown"></div>
+          </div>
+          <div className="contactButton">
+            <p>Kontakt</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="aboutMeBanner">
+        <div className="aboutMeBannerLeft">
+          <h5>Heisann :)</h5>
+          <h6>Her står det litt om hvem jeg er, og<br/>
+          hvordan jeg endte opp med frontend og<br/>mobilutvikling.</h6>
+          <div className="introductionButtons">
+            <div className="downloadCV">
+              <p>Last ned CV</p>
+            </div>
+            <div className="portfolio">
+              <div className="arrivingSoon">
+                <p>Kommer</p>
+              </div>
+              <p className="portfolioText">Portfolie</p>
+            </div>
+          </div>
+        </div>
+        <div className="aboutMeBannerRight">
+          <div className="roundPortrait"></div>
+        </div>
+      </div>
+
+      <div className="whoAmISection">
+        <h4>Hvem er jeg?</h4>
+        <div className="whoAmIDivider">
+          <div className="whoAmILeft">
+            <div className="partOne">
+              <h6>Part 1</h6>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+                sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+            </div>
+            <div className="partTwo">
+              <h6>Part 1</h6>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+                sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+            </div>
+            <div className="partThree">
+              <h6>Part 1</h6>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+                sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+            </div>
+          </div>
+          <div className="whoAmIRight">
+            <div className="quoteSection">
+              <div className="quoteHeader">
+                <div className="headerIllustration"></div>
+                <div>
+                  <p>Nicole a. Dkoea</p>
+                  <p className="quoteFrom">Mamma</p>
+                </div>
+              </div>
+              <p>"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+                sed diam nonummy nibh euismod tincidunt ut laoreet."</p>
+            </div>
+            <div className="statusSection">
+              <div className="statusHeader">
+                <p>Status</p>
+                <div className="statusIcon"></div>
+              </div>
+              <div className="statusContainer">
+                <p>Student på 3. året i frontend og mobilutvikling bachelor.</p>
+              </div>
+            </div>
+            <div className="myInterestSection">
+              <p>Mine interesser</p>
+              <div className="pointsField">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="footerSection">
+      <div className="footerContainer">
+        <div className="footerLeft">
+          <h6>© 2022, bygget<br/>og designet av</h6>
+          <p>Adrian<br/>Aspevik</p>
+          <div className="sourceCodeButton">
+            <p>Kildekode</p>
+            <div className="gitHubIcon"></div>
+          </div>
+        </div>
+        <div className="footerMiddle">
+          <div className="footerEmail">
+            <p>adrian@aspevik.com</p>
+            <div className="footerLine"></div>
+          </div>
+          <div className="footerNumber">
+            <p>+47 992 50 743</p>
+            <div className="footerLine"></div>
+          </div>
+        </div>
+        <div className="footerRight">
+          <p>Linker</p>
+          <div className="linksFlex">
+            <div className="footerLinkedin"></div>
+            <div className="footerGit"></div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
   </Layout>
 )
 

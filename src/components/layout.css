@@ -765,3 +765,166 @@ span {
 	margin-right: 8px;
 	
 }
+
+
+/* ---------------- About me page ---------------- */
+
+.aboutMePage {
+	margin-bottom: 128px;
+}
+
+.aboutMeBanner {
+	background-color: var(--gray);
+	width: 100%;
+	max-width: 1650px;
+	margin: auto;
+	border-radius: 80px;
+	display: flex;
+}
+
+.aboutMeBannerLeft h5 {
+	font-size: 68px;
+	margin-bottom: 24px;
+	color: var(--blackfade);
+}
+
+.aboutMeBannerLeft h6 {
+	font-size: 20px;
+	line-height: 1.4;
+	margin-bottom: -16px;
+}
+
+.aboutMeBannerLeft {
+	flex: 50%;
+	padding: 112px;
+}
+
+
+
+.roundPortrait {
+	background-image: url(../images/roundPortrait.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 400px;
+	height: 400px;
+	margin: 64px 112px 64px 0px;
+	border-radius: 400px;
+}
+
+
+.whoAmISection {
+	max-width: 1100px;
+	margin: auto;
+	margin-top: 64px;
+}
+
+.whoAmISection h4 {
+	font-size: 70px;
+	font-weight: 600;
+	margin-bottom: 64px;
+}
+
+.whoAmIDivider {
+	display: flex;
+	gap: 48px;
+}
+
+.whoAmILeft {
+
+}
+
+.partOne h6, .partTwo h6, .partThree h6 {
+	font-size: 28px;
+	font-weight: 500;
+	margin-bottom: 24px;
+}
+
+.partOne, .partTwo, .partThree {
+	padding: 32px;
+	background-color: var(--whitefaded);
+	border-radius: 36px;
+	margin-bottom: 24px;
+}
+
+.partOne p, .partTwo p, .partThree p {
+	font-size: 20px;
+	line-height: 1.4;
+}
+
+.whoAmIRight {
+
+}
+
+.quoteSection {
+	background-color: var(--blackfade);
+	padding: 32px;
+	max-width: 448px;
+	color: var(--white);
+	font-size: 20px;
+	line-height: 1.4;
+	border-radius: 24px 24px 48px 48px;
+}
+
+.headerIllustration {
+	width: 64px;
+	height: 64px;
+	background-color: var(--white);
+	border-radius: 32px;
+	margin-right: 32px;
+}
+
+.quoteHeader {
+	color: var(--accent);
+	font-weight: 800;
+	font-size: 20px;
+	display: flex;
+	margin-bottom: 32px;
+	line-height: 1;
+}
+
+.quoteFrom {
+	margin-top: 6px;
+	font-weight: 400;
+}
+
+
+.statusSection {
+	margin-top: 16px;
+	padding: 20px;
+	background-color: var(--blackfade);
+	border-radius: 22px;
+}
+
+.statusHeader {
+	color: var(--accent);
+	font-size: 20px;
+	margin-bottom: 16px;
+}
+
+.statusContainer {
+	padding: 16px;
+	background-color: var(--accent);
+	border-radius: 12px;
+}
+
+.statusContainer p {
+	font-size: 18px;
+	color: var(--blackfade);
+	font-weight: 600;
+}
+
+.myInterestSection {
+	margin-top: 16px;
+	padding: 32px;
+	background-color: var(--blackfade);
+	border-radius: 22px;
+}
+
+.myInterestSection p {
+	text-align: center;
+	color: var(--white);
+	font-size: 22px;
+	font-weight: 800;
+}
+
