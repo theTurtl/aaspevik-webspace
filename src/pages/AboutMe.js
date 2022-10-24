@@ -40,9 +40,9 @@ const AboutMe = () => (
 
       <div className="aboutMeBanner">
         <div className="aboutMeBannerLeft">
-          <p>Heisann :)</p>
-          <p>Her står det litt om hvem jeg er, og<br/>
-          hvordan jeg endte opp med frontend og<br/>mobilutvikling.</p>
+          <h5>Heisann :)</h5>
+          <h6>Her står det litt om hvem jeg er, og<br/>
+          hvordan jeg endte opp med frontend og<br/>mobilutvikling.</h6>
           <div className="introductionButtons">
             <div className="downloadCV">
               <p>Last ned CV</p>
@@ -82,12 +82,15 @@ const AboutMe = () => (
           </div>
           <div className="whoAmIRight">
             <div className="quoteSection">
-              <div className="header">
+              <div className="quoteHeader">
                 <div className="headerIllustration"></div>
-                <p>Nicole a. Dkoea</p>
+                <div>
+                  <p>Nicole a. Dkoea</p>
+                  <p className="quoteFrom">Mamma</p>
+                </div>
               </div>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
-                sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+              <p>"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+                sed diam nonummy nibh euismod tincidunt ut laoreet."</p>
             </div>
             <div className="statusSection">
               <div className="statusHeader">
@@ -101,10 +104,39 @@ const AboutMe = () => (
             <div className="myInterestSection">
               <p>Mine interesser</p>
               <div className="pointsField">
-                
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <div className="footerSection">
+      <div className="footerContainer">
+        <div className="footerLeft">
+          <h6>© 2022, bygget<br/>og designet av</h6>
+          <p>Adrian<br/>Aspevik</p>
+          <div className="sourceCodeButton">
+            <p>Kildekode</p>
+            <div className="gitHubIcon"></div>
+          </div>
+        </div>
+        <div className="footerMiddle">
+          <div className="footerEmail">
+            <p>adrian@aspevik.com</p>
+            <div className="footerLine"></div>
+          </div>
+          <div className="footerNumber">
+            <p>+47 992 50 743</p>
+            <div className="footerLine"></div>
+          </div>
+        </div>
+        <div className="footerRight">
+          <p>Linker</p>
+          <div className="linksFlex">
+            <div className="footerLinkedin"></div>
+            <div className="footerGit"></div>
+          </div>
+          
         </div>
       </div>
     </div>
