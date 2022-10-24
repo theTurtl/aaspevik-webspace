@@ -216,8 +216,11 @@ const IndexPage = () => (
         </div>
         <div className="footerRight">
           <p>Linker</p>
-          <div className="footerGit"></div>
-          <div className="footerLinkedin"></div>
+          <div className="linksFlex">
+            <div className="footerLinkedin"></div>
+            <div className="footerGit"></div>
+          </div>
+          
         </div>
       </div>
     </div>
