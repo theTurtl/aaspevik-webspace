@@ -616,7 +616,7 @@ span {
 }
 
 .contactsByeIllustration {
-	background-image: url(../images/byeIllustration.svg);
+	background-image: url(../images/byeGraphic.svg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -649,3 +649,119 @@ span {
 	margin-bottom: 80px;
 }
 
+
+/* --------------- footer section --------------- */
+
+.footerSection {
+	position: relative;
+	height: 336px;
+	background-color: var(--black);
+} 
+
+.footerContainer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	align-items: center;
+	gap: 256px
+}
+
+.footerLeft {
+	background-color:#E1DBDA20;
+	padding: 12px;
+	color: var(--white);
+	border-radius: 10px 10px 20px 20px;
+}
+
+.footerLeft h6 {
+	font-size: 15px;
+	line-height: 1.4;
+}
+
+.footerLeft p {
+	font-size: 32px;
+	font-weight: 800;
+	color: var(--white);
+	margin-top: 8px
+}
+
+.sourceCodeButton p {
+	font-weight: 300;
+	font-size: 16px;
+	color: var(--blackfade);
+	font-weight: 600;
+	margin-top: 0px;
+	margin-right: 10px;
+}
+
+.sourceCodeButton {
+	display: flex;
+	padding: 10px;
+	background-color: var(--white);
+	margin-top: 16px;
+	border-radius: 10px;
+}
+
+.gitHubIcon {
+	background-image: url(../images/gitHub.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 16px;
+	height: 16px;
+	transform: scale(1.75);
+}
+
+
+.footerEmail, .footerNumber {
+	color: var(--white);
+	font-size: 20px;
+	font-weight: 500;
+	width: max-content;
+	margin-bottom: 16px;
+}
+
+.footerLine {
+	width: 100%;
+	height: 6px;
+	background-color: var(--accent);
+	margin-top: 8px;
+	border-radius: 2px;
+}
+
+
+
+.footerRight p{
+	font-size: 20px;
+	font-weight: 800;
+	color: var(--white);
+	margin-bottom: 20px;
+}
+
+.linksFlex {
+	display: flex;
+}
+
+.footerGit {
+	background-image: url(../images/gitHub.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 36px;
+	height: 36px;
+	filter: invert();
+}
+
+.footerLinkedin {
+	background-image: url(../images/linkedIn.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 36px;
+	height: 36px;
+	filter: invert();
+	margin-right: 8px;
+	
+}

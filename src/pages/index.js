@@ -193,6 +193,37 @@ const IndexPage = () => (
         <p>Til toppen</p>
       </div>
     </div>
+
+    <div className="footerSection">
+      <div className="footerContainer">
+        <div className="footerLeft">
+          <h6>© 2022, bygget<br/>og designet av</h6>
+          <p>Adrian<br/>Aspevik</p>
+          <div className="sourceCodeButton">
+            <p>Kildekode</p>
+            <div className="gitHubIcon"></div>
+          </div>
+        </div>
+        <div className="footerMiddle">
+          <div className="footerEmail">
+            <p>adrian@aspevik.com</p>
+            <div className="footerLine"></div>
+          </div>
+          <div className="footerNumber">
+            <p>+47 992 50 743</p>
+            <div className="footerLine"></div>
+          </div>
+        </div>
+        <div className="footerRight">
+          <p>Linker</p>
+          <div className="linksFlex">
+            <div className="footerLinkedin"></div>
+            <div className="footerGit"></div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
   </Layout>
 )
 
