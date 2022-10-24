@@ -765,3 +765,14 @@ span {
 	margin-right: 8px;
 	
 }
+
+
+/* ---------------- About me page ---------------- */
+
+.aboutMeBanner {
+	background-color: var(--gray);
+	width: 100%;
+	max-width: 1280px;
+	margin: auto;
+	padding: 112px;
+}
