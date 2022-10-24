@@ -119,7 +119,53 @@ const IndexPage = () => (
       </div>
     </div>
     
-    
+    <div className="didYouKnowSection">
+      <div className="centerDiv">
+        <div className="didYouKnowContainer">
+          <div className="didYouText">
+            <h6>Visste du at...</h6>
+            <p>Gjennom design og en god brukeropplevelse vil en kunne formidle
+              og danne et bedre forhold med målgruppen din? Design og brukeropplevelse 
+              beskrives ofte som en nøkkelfaktor for...
+            </p>
+          </div>
+          <div className="statBoxesContainer">
+            <div className="upperBoxes">
+              <div className="statBox fiftyMs">
+                <p className="statBoxTitle">50ms</p>
+                <p className="statBoxP">for å danne et<br/>førsteinntrykk.</p>
+                <div className="sourceIcon">
+                  <div className="infoIcon"></div>
+                </div>
+              </div>
+              <div className="statBox">
+                <p className="statBoxTitle">75%</p>
+                <p className="statBoxP">baserer troverdigheten av<br/>en merkevare på design.</p>
+                <div className="sourceIcon">
+                  <div className="infoIcon"></div>
+                </div>
+              </div>
+            </div>
+            <div className="lowerBoxes">
+            <div className="statBox">
+                <p className="statBoxTitle">42%</p>
+                <p className="statBoxP">vil forlate en side<br/>med dårlig funksjonalitet</p>
+                <div className="sourceIcon">
+                  <div className="infoIcon"></div>
+                </div>
+              </div>
+              <div className="statBox">
+                <p className="statBoxTitle">75%</p>
+                <p className="statBoxP">av forbrukere mener merke-<br/>varer bør prioritere design.</p>
+                <div className="sourceIcon">
+                  <div className="infoIcon"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </Layout>
 )
 

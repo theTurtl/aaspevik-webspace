@@ -58,6 +58,7 @@ table {
 	--whitefaded: #EEE7E7;
 	--blackfade: #1E1E1E;
 	--accent: #B3EACB;
+	--accentwhite: #E3EEE5;
 	--gray: #E1DBDA;
 	--darkergray: #E7E0DF;
 	background-color: var(--white);
@@ -425,3 +426,114 @@ span {
 	height: 350px;
 }
 
+
+
+/* -------------------- Did you know section -------------------- */
+
+.didYouKnowSection {
+	height: 100vh;
+
+}
+
+.centerDiv {
+	position: relative;
+	height: 100vh;
+}
+
+.didYouKnowContainer {
+	display: flex;
+	margin: 80px;
+	background-color: var(--accent);
+	max-width: 1270px;
+	width: 1400px;
+	margin: auto;
+	padding: 50px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 42px;
+}
+
+.didYouText {
+	flex: 50%;
+	color: var(--blackfade);
+	padding: 50px;
+}
+
+.didYouText h6{
+	font-size: 64px;
+	font-weight: 700;
+	margin-bottom: 42px;
+}
+
+.didYouText p {
+	font-size: 22px;
+	line-height: 1.45;
+	max-width: 556px;
+}
+
+.statBoxesContainer {
+	flex: 50%;
+	margin-right: 4px;
+}
+
+.upperBoxes {
+	position: relative;
+	display: flex;
+	gap: 16px;
+	float: right;
+	margin-top: 16px;
+}
+
+.lowerBoxes {
+	margin-top: 16px;
+	position: relative;
+	display: flex;
+	gap: 16px;
+	float: right;
+}
+
+.statBox {
+	position: relative;
+	padding: 24px;
+	background-color: var(--accentwhite);
+	border-radius: 28px;
+	width: max-content;
+}
+
+.statBoxTitle {
+	font-size: 46px;
+	font-weight: 800;
+	color: var(--blackfade);
+	margin-bottom: 8px;
+}
+
+.statBoxP {
+	font-size: 18px;
+	line-height: 1.2;
+	
+}
+
+.fiftyMs {
+	padding-right: 56px;
+}
+
+.sourceIcon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 12px;
+	padding: 8px;
+	background-color: #00000010;
+	border-radius: 16px;
+}
+
+.infoIcon {
+	background-image: url(../images/infoIcon.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 18px;
+	height: 18px;
+}
