@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 import NavBar from "../components/NavBar"
+import { Helmet } from "react-helmet"
 
 
 const IndexPage = () => { 
@@ -30,6 +31,9 @@ const IndexPage = () => {
 
   return (
   <Layout>
+    <Helmet>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
+  </Helmet>
     <Seo title="Hjem" />
     <div className="scrollContainer">
       <div className="landingPageHeroView scrollSnap" ref={top}>
