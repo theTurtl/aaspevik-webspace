@@ -3,43 +3,12 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import NavBar from "../components/navBar"
 
 const AboutMe = () => (
   <Layout>
     <div className="aboutMePage">
-      <div className="landingPageNavBar">
-        <div className="navLeft">
-          <Link to="/" style={{textDecoration: 'none'}}>
-            <div className="welcomeContainer">
-              <p>Hyggelig å treffe deg! :)</p>
-            </div>
-          </Link>
-          <div className="availabilityStatus">
-            <p>Ledig</p>
-            <div className="availabilityIcon"></div>
-          </div>
-        </div>
-        <div className="navMiddle">
-          <div className="knowledgeButton">
-            <p>Min kunnskap</p>
-            <div className="accentLineKnowledge"></div>
-          </div>
-          <div className="aboutButton">
-            <p>Om meg</p>
-            <div className="accentLineAbout"></div>
-          </div>
-        </div>
-        <div className="navRight">
-          <div className="languageMenu">
-            <p>NO</p>
-            <div className="arrowDown"></div>
-          </div>
-          <div className="contactButton">
-            <p>Kontakt</p>
-          </div>
-        </div>
-      </div>
-
+      <NavBar />
       <div className="aboutMeBanner">
         <div className="aboutMeBannerLeft">
           <h5>Heisann :)</h5>

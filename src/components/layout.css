@@ -61,6 +61,7 @@ table {
 	--accentwhite: #E3EEE5;
 	--gray: #E1DBDA;
 	--darkergray: #E7E0DF;
+	--minHeight: 880px;
 	background-color: var(--white);
 }
 
@@ -75,12 +76,14 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .scrollSnap {
-	scroll-snap-align: start;
+	scroll-snap-align: center;
 }
 
 .landingPageHeroView {
-	height: 100vh;
+	position: relative;
 	padding-top: 0.5px;
+	max-height: var(--maxHeight);
+	min-height: 100vh;
 }
 
 .landingPageNavBar {
@@ -235,16 +238,31 @@ p, h1, h2, h3, h4, h5, h6 {
 	color: var(--white);
 }
 
+.mobileMenu {
+	background-image: url(../images/menu.svg);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 56px;
+	height: 56px;
+	visibility: hidden;
+
+	
+}
+
 .frontContent {
 	display: flex;
 	max-width: max-content;
 	margin: auto;
 	gap: 180px;
+	transition: ease all .5s;
+	
 }
 
 .introductionView {
 	width: max-content;
 	margin: 148px 0px;
+	float: left;
 }
 
 .helloContainer p {
@@ -330,6 +348,7 @@ span {
 	background-size: contain;
 	width: 600px;
 	height: 600px;
+	float: right;
 }
 
 .frontPicture {
@@ -398,17 +417,28 @@ span {
 	width: 90px;
 	height: 90px;
 	width: 100%;
-	margin-bottom: 64px;
+	transition: ease all .05s;
 }
+
+.nextButton2 {
+	background-image: url(../images/nextButton.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	width: 90px;
+	height: 90px;
+	margin: auto;
+	transition: ease all .05s;
+	display: none;
+}
+
+
 
 .nextButton:hover {
 	cursor: pointer;
 	animation: enlarger 0.5s forwards infinite;
 }
 
-.nextButton:focus {
-	display: none;
-}
 
 @keyframes enlarger {
 	0% {filter: drop-shadow(0px 0px 0px var(--blackfade))}
@@ -421,8 +451,8 @@ span {
 
 .myKnowledgeSection {
 	position: relative;
-	height: 100vh;
-	
+	min-height: 100vh;
+	max-height: var(--maxHeight);
 }
 
 .myKnowledgeContainer {
@@ -439,7 +469,7 @@ span {
 
 .knowledgeBoxes {
 	margin: 100px 80px;
-	display: grid;
+	display: flex;
 	grid-template-columns: auto auto auto;
 	gap: 14px;
 }
@@ -510,14 +540,29 @@ span {
 /* -------------------- Did you know section -------------------- */
 
 .didYouKnowSection {
-	height: 100vh;
-
+	min-height: 100vh;
+	max-height: var(--maxHeight);
 }
 
 .centerDiv {
 	position: relative;
 	height: 100vh;
 }
+
+/*.didYouKnowContainer {
+	display: flex;
+	margin: 80px;
+	background-color: var(--accent);
+	max-width: 1270px;
+	width: 1400px;
+	margin: auto;
+	padding: 50px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 42px;
+} */
 
 .didYouKnowContainer {
 	display: flex;
@@ -532,7 +577,7 @@ span {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	border-radius: 42px;
-}
+} 
 
 .didYouText {
 	flex: 50%;
@@ -622,7 +667,8 @@ span {
 
 .contactHookSection {
 	position: relative;
-	height: 100vh;
+	min-height: 100vh;
+	max-height: var(--maxHeight);
 }
 
 .contactHookContainer {
@@ -1008,3 +1054,406 @@ span {
 	font-weight: 800;
 }
 
+
+@media screen and (max-width: 1600px){
+	.frontContent {
+		
+		gap: 0px
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	.landingPageHeroView{
+		min-height: max-content;
+		scroll-snap-align: start;
+	}
+
+	.frontContent {
+		flex-direction: column-reverse;
+		gap: 0px;
+		margin-bottom: -128px;
+	}
+
+	.introductionView {
+		margin: 32px 0px 0px 0px;
+		margin: auto;
+		margin-top: 32px;
+	}
+
+	.nextButton {
+		margin-top: 180px;
+	}
+}
+
+
+/*@media screen and (max-width: 820px) {
+
+	.welcomeContainer{
+		width: max-content;
+		font-size: 20px;
+		height: max-content;
+		padding: 20px;
+	}
+	.landingPageNavBar {
+		background-color: #B3EACB;
+		margin: 64px;
+	}
+
+	.availabilityStatus {
+		display: none;
+	}
+
+	.navRight {
+		display: none;
+	}
+
+	.navMiddle {
+		display: none;
+	}
+
+	.mobileMenu {
+		visibility: visible;
+		float: right;
+	}
+
+	.landingPageHeroView{
+		min-height: max-content;
+		scroll-snap-align: start;
+		width: 100%;
+	}
+
+	.frontContent {
+		position: relative;
+		flex-direction: column-reverse;
+		gap: 0px;
+		margin: 32px;
+		max-width: 100%;
+		transition: none;
+	}
+
+	.frontPortrait {
+		width: 400px;
+		height: 400px;
+		margin: auto;
+	}
+
+	.frontPicture {
+		width: 340px;
+		height: 340px;
+		margin-top: 32px;
+	}
+
+	.introductionView {
+		margin: auto;
+		margin-top: 32px;
+
+	}
+
+	.nextButton {
+		margin-top: 80px;
+		transition: none;
+	}
+} */
+
+@media screen and (max-width: 390px) {
+	
+	.landingPageHeroView {
+		margin: 0px;
+		margin-top: 8px;
+		height: 100vh;
+		scroll-snap-align: start;
+		min-height: max-content;
+		
+	}
+
+	.landingPageNavBar {
+		margin: 32px;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.welcomeContainer {
+		width: max-content;
+		font-size: 14px;
+		height: max-content;
+		
+	}
+
+	.availabilityStatus {
+		display: none;
+	}
+
+	.navMiddle, .navRight {
+		display: none;
+	}
+
+	.navLeft {
+		margin: 0;
+		padding: 0;
+		float: left;
+	}
+
+	.mobileMenu {
+
+		visibility: visible;
+		height: 36px;
+		width: 36px;
+		float: right;
+	}
+
+	.frontPortrait {
+		width: 256px;
+		height: 256px;
+		width: 100%;
+		margin-bottom: 32px;
+	}
+
+	.frontPicture {
+		width: 208px;
+		height: 208px;
+		margin-top: 24px;
+	}
+
+	.moreAbout {
+		width: 96px;
+		height: 96px;
+		transform: translateX(-8px);
+	}
+
+	.moreAboutText {
+		width: 64px;
+		height: 64px;
+		margin-top: 16px;
+	}
+
+	.frontContent {
+		width: max-content;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		margin-top: 32px;
+	}
+
+	.introductionView {
+		margin: auto;
+		width: 320px;
+	}
+
+	.helloContainer p {
+		font-size: 18px;
+	}
+
+	.helloContainer h1 {
+		font-size: 44px;
+	}
+
+	.introductionDescription {
+		margin-top: 16px;
+		font-size: 24px;
+	}
+
+
+	.introductionButtons {
+		margin-top: 34px;
+	}
+
+	.downloadCV p, .portfolioText {
+		font-size: 16px;
+	}
+
+	.nextButton2 {
+		height: 64px;
+		margin-top: 0px;
+		display: inherit;
+		margin-top: 32px;
+	}
+
+	.nextButton {
+		display: none;
+	}
+
+
+	.myKnowledgeSection {
+
+		min-height: 100vh;
+		height: max-content;
+		margin: 32px;
+		scroll-snap-type: none;
+		scroll-snap-type: none;
+	}
+
+	.scrollSnap {
+		scroll-snap-type: none;
+		scroll-snap-type: none;
+	}
+
+	.scrollContainer {
+		scroll-snap-type: none;
+		scroll-snap-type: none;
+	}
+	
+	.myKnowledgeContainer h3 {
+		line-height: 1.4;
+		font-size: 48px;
+	}
+
+	.myKnowledgeContainer {
+		padding-top: 32px;
+	}
+
+	.knowledgeBoxes {
+		flex-direction: column;
+		margin: 32px 0px;
+	}
+
+	.placeholderTech {
+		height: 440px;
+		width: 100%;
+	}
+
+	.didYouKnowSection {
+		height: 100vh;
+	}
+
+	.didYouKnowContainer {
+		display: flex;
+		margin: 0px;
+		max-width: none;
+		width: 375px;
+		margin: auto;
+		padding: 0px;
+		position: absolute;
+		height: max-content;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 42px 42px 32px 32px;
+		flex-direction: column;
+		margin: 64px 0px;
+	}
+
+
+
+	.didYouText h6 {
+		font-size: 48px;
+	}
+	
+	.didYouText p {
+		font-size: 18px;
+	}
+
+	.statBoxesContainer {
+		flex-direction: column;
+		padding: 16px;
+	}
+
+	.statBoxTitle {
+		font-size: 26px;
+	}
+
+	.statBoxP {
+		font-size: 14px;
+	}
+
+	.statBoxes {
+
+	}
+
+	.lowerBoxes {
+		flex-direction: row;
+		width: 100%;
+		
+	}
+
+	.upperBoxes {
+		flex-direction: row;
+		width: 100%;
+	}
+
+	.statBox {
+		padding: 16px;
+		border-radius: 24px;
+	}
+
+	.contactHookSection {
+		height: max-content;
+		padding: 64px 0px;
+		width: 100%;
+
+	}
+
+	.contactHookContainer {
+		flex-direction: column-reverse;
+		width: 375px;
+	}
+
+	.linkedIn, .gitHub {
+		width: 80px;
+		height: 80px;
+	}
+
+	.contactsByeIllustration {
+		width: 300px;
+		height: 300px;
+		margin-left: 0;
+		margin: auto;
+		margin-bottom: 42px;
+	}
+
+	.contactLinks {
+		width: max-content;
+		margin: auto;
+
+	}
+
+	.contactNumber {
+		margin-bottom: 32px;
+	}
+
+	.footerContainer {
+		gap: 0px;
+		justify-content: space-between;
+		
+		width: 300px;
+	}
+
+	.footerMiddle {
+		display: none;
+	}
+
+
+	.aboutMeBanner {
+		flex-direction: column-reverse;
+		border-radius: 8px 8px 32px 32px;
+	}
+
+
+	.roundPortrait {
+		width: 300px;
+		height: 300px;
+		margin: auto;
+		margin-top: 64px;
+	}
+
+	.aboutMeBannerLeft {
+		padding: 16px;
+	}
+
+	.aboutMeBannerLeft h5 {
+		font-size: 48px;
+		margin-top: 32px;
+	}
+
+	.whoAmISection {
+		padding: 16px;
+	}
+
+	.whoAmISection h4 {
+		font-size: 48px;
+	}
+
+	.whoAmIDivider {
+		flex-direction: column-reverse;
+	}
+}

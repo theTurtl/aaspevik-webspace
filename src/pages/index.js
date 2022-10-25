@@ -5,6 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
+import NavBar from "../components/NavBar"
 
 
 const IndexPage = () => { 
@@ -32,49 +33,16 @@ const IndexPage = () => {
     <Seo title="Hjem" />
     <div className="scrollContainer">
       <div className="landingPageHeroView scrollSnap" ref={top}>
-        <div className="landingPageNavBar">
-          <div className="navLeft">
-            <Link to="/" style={{textDecoration: 'none'}}>
-              <div className="welcomeContainer">
-                <p>Hyggelig å treffe deg! :)</p>
-              </div>
-            </Link>
-            <div className="availabilityStatus">
-              <p>Ledig</p>
-              <div className="availabilityIcon"></div>
-            </div>
-          </div>
-          <div className="navMiddle">
-            <div className="knowledgeButton" onClick={toKnowledgeClick}>
-              <p>Min kunnskap</p>
-              <div className="accentLineKnowledge"></div>
-            </div>
-            <Link to="/AboutMe" style={{textDecoration: 'none'}}>
-              <div className="aboutButton">
-                <p>Om meg</p>
-                <div className="accentLineAbout"></div>
-              </div>
-            </Link>
-          </div>
-          <div className="navRight">
-            <div className="languageMenu">
-              <p>NO</p>
-              <div className="arrowDown"></div>
-            </div>
-            <div className="contactButton">
-              <p>Kontakt</p>
-            </div>
-          </div>
-        </div>
-
+        <NavBar click={toKnowledgeClick}/>
         <div className="frontContent">
+          <div className="nextButton2" onClick={nextPageClick}></div>
           <div className="introductionView">
             <div className="helloContainer">
               <p>Hei, mitt navn er</p>
               <h1>Adrian Aspevik</h1>
             </div>
             <div className="introductionDescription">
-              <p>Jeg er 26 år, og er en   <span>grafisk designer</span>   og   <span>frontend utvikler</span>   basert i Bergen.</p>
+              <p>Jeg er 26 år, og er en   <span>grafisk designer</span><br/>   og   <span>frontend utvikler</span>   basert i Bergen.</p>
             </div>
             <div className="introductionButtons">
               <div className="downloadCV">
@@ -216,10 +184,10 @@ const IndexPage = () => {
           </div>
           <div className="contactsByeIllustration"></div>
         </div>
-        <div className="toTheTop" onClick={topPageClick}>
+        {/*<div className="toTheTop" onClick={topPageClick}>
           <div className="arrowUp"></div>
           <p>Til toppen</p>
-        </div>
+        </div>*/}
       </div>
 
       <div className="footerSection scrollSnap">
