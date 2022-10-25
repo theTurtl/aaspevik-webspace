@@ -94,7 +94,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .welcomeContainer {
-	border: 3px solid var(--gray);
+	border: 2px solid var(--gray);
+	background-color: var(--gray);
 	max-width: max-content;
 	padding: 14px 18px;
 	border-radius: 16px;
@@ -103,6 +104,16 @@ p, h1, h2, h3, h4, h5, h6 {
 	margin-right: 16px;
 	height: 18px;
 }
+
+.welcomeContainer:hover {
+	animation: homeButton 0.2s forwards;
+}
+
+@keyframes homeButton {
+	0% {}
+	100% {background-color: var(--blackfade); color: var(--white);}
+}
+
 
 .availabilityStatus {
 	padding: 16px 20px;
@@ -349,11 +360,11 @@ span {
 
 @keyframes inAbout {
 	0% {}
-	100% {scale: 1.05;}
+	100% {scale: 1.05; filter: drop-shadow(0px 0px 24px #00000025);}
 }
 
 @keyframes outAbout {
-	0% {scale: 1.05;}
+	0% {scale: 1.05; filter: drop-shadow(0px 0px 24px #00000025);}
 	100% {}
 }
 
