@@ -68,8 +68,19 @@ p, h1, h2, h3, h4, h5, h6 {
 	font-family: 'Quicksand', sans-serif;
 }
 
+.scrollContainer {
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+	height: 100vh;
+}
+
+.scrollSnap {
+	scroll-snap-align: start;
+}
+
 .landingPageHeroView {
 	height: 100vh;
+	padding-top: 0.5px;
 }
 
 .landingPageNavBar {
@@ -83,7 +94,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .welcomeContainer {
-	border: 3px solid var(--gray);
+	border: 2px solid var(--gray);
+	background-color: var(--gray);
 	max-width: max-content;
 	padding: 14px 18px;
 	border-radius: 16px;
@@ -92,6 +104,16 @@ p, h1, h2, h3, h4, h5, h6 {
 	margin-right: 16px;
 	height: 18px;
 }
+
+.welcomeContainer:hover {
+	animation: homeButton 0.2s forwards;
+}
+
+@keyframes homeButton {
+	0% {}
+	100% {background-color: var(--blackfade); color: var(--white);}
+}
+
 
 .availabilityStatus {
 	padding: 16px 20px;
@@ -116,6 +138,18 @@ p, h1, h2, h3, h4, h5, h6 {
 	margin-left: 16px;
 }
 
+@keyframes out {
+	0% {width: 100%; background-color: var(--accent);}
+	50% {width: 0%;}
+	100% {width: 100%;}
+}
+
+@keyframes in {
+	0% {width: 100%;}
+	50% {width: 0%;}
+	100% {width: 100%; background-color: var(--accent);}
+}
+
 .navMiddle {
 	display: flex;
 	width: max-content;
@@ -130,12 +164,34 @@ p, h1, h2, h3, h4, h5, h6 {
 	font-size: 22px;
 }
 
-.accentLine {
+.aboutButton:hover > .accentLineAbout {
+	animation: in 0.5s forwards;
+}
+
+.knowledgeButton:hover > .accentLineKnowledge {
+	animation: in 0.5s forwards;
+}
+
+.knowledgeButton:hover {
+	cursor: pointer;
+}
+
+.accentLineKnowledge {
 	width: 100%;
 	height: 4px;
 	background-color: var(--gray);
 	margin-top: 8px;
 	border-radius: 2px;
+	animation: out 0.5s forwards;
+}
+
+.accentLineAbout {
+	width: 100%;
+	height: 4px;
+	background-color: var(--gray);
+	margin-top: 8px;
+	border-radius: 2px;
+	animation: out 0.5s forwards;
 }
 
 .aboutButton {
@@ -299,6 +355,22 @@ span {
 	top: 0;
 	right: 0;
 	transform: translateX(128px);
+	animation: outAbout 0.5s forwards;
+}
+
+@keyframes inAbout {
+	0% {}
+	100% {scale: 1.05; filter: drop-shadow(0px 0px 24px #00000025);}
+}
+
+@keyframes outAbout {
+	0% {scale: 1.05; filter: drop-shadow(0px 0px 24px #00000025);}
+	100% {}
+}
+
+
+.moreAbout:hover {
+	animation: inAbout 0.2s forwards;
 }
 
 .moreAboutText {
@@ -319,14 +391,12 @@ span {
 }
 
 .nextButton {
-	position: absolute;
 	background-image: url(../images/nextButton.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
 	width: 90px;
 	height: 90px;
-	bottom: 0;
 	width: 100%;
 	margin-bottom: 64px;
 }
@@ -334,6 +404,10 @@ span {
 .nextButton:hover {
 	cursor: pointer;
 	animation: enlarger 0.5s forwards infinite;
+}
+
+.nextButton:focus {
+	display: none;
 }
 
 @keyframes enlarger {
@@ -404,6 +478,11 @@ span {
 	font-size: 22px;
 	line-height: 1.4;
 	font-weight: 500;
+	color: var(--blackfade);
+}
+
+.myBioHook:hover {
+	animation: inAbout 0.1s forwards;
 }
 
 .myBioButton {

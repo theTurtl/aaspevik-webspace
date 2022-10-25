@@ -9,9 +9,11 @@ const AboutMe = () => (
     <div className="aboutMePage">
       <div className="landingPageNavBar">
         <div className="navLeft">
-          <div className="welcomeContainer">
-            <p>Hyggelig å treffe deg! :)</p>
-          </div>
+          <Link to="/" style={{textDecoration: 'none'}}>
+            <div className="welcomeContainer">
+              <p>Hyggelig å treffe deg! :)</p>
+            </div>
+          </Link>
           <div className="availabilityStatus">
             <p>Ledig</p>
             <div className="availabilityIcon"></div>
@@ -20,11 +22,11 @@ const AboutMe = () => (
         <div className="navMiddle">
           <div className="knowledgeButton">
             <p>Min kunnskap</p>
-            <div className="accentLine"></div>
+            <div className="accentLineKnowledge"></div>
           </div>
           <div className="aboutButton">
             <p>Om meg</p>
-            <div className="accentLine"></div>
+            <div className="accentLineAbout"></div>
           </div>
         </div>
         <div className="navRight">
