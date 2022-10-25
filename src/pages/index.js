@@ -7,225 +7,256 @@ import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 
 
-const IndexPage = () => (
+const IndexPage = () => { 
+
+  const ref = React.useRef(null);
+  const top = React.useRef(null);
+  const [isVisible, setIsVisible] = React.useState(true);
+
+
+  const nextPageClick = () => {
+    setIsVisible(false);
+    ref.current?.scrollIntoView({behavior: 'smooth'});
+  }
+
+  const topPageClick = () => {
+    top.current?.scrollIntoView({behavior: 'smooth'});
+  }
+
+  const toKnowledgeClick = () => {
+    ref.current?.scrollIntoView({behavior: 'smooth'});
+  }
+
+  return (
   <Layout>
     <Seo title="Hjem" />
-    <div className="landingPageHeroView">
-      <div className="landingPageNavBar">
-        <div className="navLeft">
-          <div className="welcomeContainer">
-            <p>Hyggelig å treffe deg! :)</p>
+    <div className="scrollContainer">
+      <div className="landingPageHeroView scrollSnap" ref={top}>
+        <div className="landingPageNavBar">
+          <div className="navLeft">
+            <Link to="/" style={{textDecoration: 'none'}}>
+              <div className="welcomeContainer">
+                <p>Hyggelig å treffe deg! :)</p>
+              </div>
+            </Link>
+            <div className="availabilityStatus">
+              <p>Ledig</p>
+              <div className="availabilityIcon"></div>
+            </div>
           </div>
-          <div className="availabilityStatus">
-            <p>Ledig</p>
-            <div className="availabilityIcon"></div>
+          <div className="navMiddle">
+            <div className="knowledgeButton" onClick={toKnowledgeClick}>
+              <p>Min kunnskap</p>
+              <div className="accentLineKnowledge"></div>
+            </div>
+            <Link to="/AboutMe" style={{textDecoration: 'none'}}>
+              <div className="aboutButton">
+                <p>Om meg</p>
+                <div className="accentLineAbout"></div>
+              </div>
+            </Link>
+          </div>
+          <div className="navRight">
+            <div className="languageMenu">
+              <p>NO</p>
+              <div className="arrowDown"></div>
+            </div>
+            <div className="contactButton">
+              <p>Kontakt</p>
+            </div>
           </div>
         </div>
-        <div className="navMiddle">
-          <div className="knowledgeButton">
-            <p>Min kunnskap</p>
-            <div className="accentLine"></div>
+
+        <div className="frontContent">
+          <div className="introductionView">
+            <div className="helloContainer">
+              <p>Hei, mitt navn er</p>
+              <h1>Adrian Aspevik</h1>
+            </div>
+            <div className="introductionDescription">
+              <p>Jeg er 26 år, og er en   <span>grafisk designer</span>   og   <span>frontend utvikler</span>   basert i Bergen.</p>
+            </div>
+            <div className="introductionButtons">
+              <div className="downloadCV">
+                <p>Last ned CV</p>
+              </div>
+              <div className="portfolio">
+                <div className="arrivingSoon">
+                  <p>Kommer</p>
+                </div>
+                <p className="portfolioText">Portfolie</p>
+              </div>
+            </div>
           </div>
-          <div className="aboutButton">
-            <p>Om meg</p>
-            <div className="accentLine"></div>
+          <div className="frontPortrait">
+            <div className="frontPicture"></div>
+            <Link to="/AboutMe">
+              <div className="moreAbout">
+                <div className="moreAboutText"></div>
+              </div>
+            </Link>
           </div>
         </div>
-        <div className="navRight">
-          <div className="languageMenu">
-            <p>NO</p>
-            <div className="arrowDown"></div>
+        <div className="nextButton" onClick={nextPageClick}></div>
+      </div>
+
+      <div className="myKnowledgeSection scrollSnap" ref={ref}>
+        <div className="myKnowledgeContainer">
+          <h3>Min <span>kunnskap</span></h3>
+          <div className="knowledgeBoxes">
+            <div className="leftBoxes">
+              <div className="visuallCommunication">
+                <h6>Visuell kommunikasjon</h6>
+                <p>Grafisk design</p>
+                <p>Brandutvikling</p>
+                <p>Visuell identitet</p>
+              </div>
+              <div className="productDevelopment">
+                <h6>Produktutvikling</h6>
+                <p>Designsprint</p>
+                <p>SCRUB</p>
+                <p>Innovasjon og prototyping</p>
+                <p>Brukertesting</p>
+              </div>
+            </div>
+            <div className="middleBoxes">
+              <div className="frontendDevelopment">
+                <h6>Frontend utvikling</h6>
+                <p>Apputvikling (iOS + Android)</p>
+                <p>Webutvikling</p>
+                <p>UX ogUIX design</p>
+                <p>Responsivt og dynamisk design</p>
+                <p>Søkemotor optimalisert (SEO)</p>
+              </div>
+              <Link to="/AboutMe" style={{textDecoration: 'none'}}>
+                <div className="myBioHook">
+                  <h6>Jeg digger å<br/>bygge ting!</h6>
+                  <div className="myBioButton">
+                    <p>Min bio</p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div className="rightBox">
+              <h6>Teknologier</h6>
+              <div className="technologyGrid">
+                <div className="placeholderTech"></div>
+              </div>
+            </div>
           </div>
-          <div className="contactButton">
-            <p>Kontakt</p>
+        </div>
+      </div>
+      
+      <div className="didYouKnowSection scrollSnap">
+        <div className="centerDiv">
+          <div className="didYouKnowContainer">
+            <div className="didYouText">
+              <h6>Visste du at...</h6>
+              <p>Gjennom design og en god brukeropplevelse vil en kunne formidle
+                og danne et bedre forhold med målgruppen din? Design og brukeropplevelse 
+                beskrives ofte som en nøkkelfaktor for...
+              </p>
+            </div>
+            <div className="statBoxesContainer">
+              <div className="upperBoxes">
+                <div className="statBox fiftyMs">
+                  <p className="statBoxTitle">50ms</p>
+                  <p className="statBoxP">for å danne et<br/>førsteinntrykk.</p>
+                  <div className="sourceIcon">
+                    <div className="infoIcon"></div>
+                  </div>
+                </div>
+                <div className="statBox">
+                  <p className="statBoxTitle">75%</p>
+                  <p className="statBoxP">baserer troverdigheten av<br/>en merkevare på design.</p>
+                  <div className="sourceIcon">
+                    <div className="infoIcon"></div>
+                  </div>
+                </div>
+              </div>
+              <div className="lowerBoxes">
+              <div className="statBox">
+                  <p className="statBoxTitle">42%</p>
+                  <p className="statBoxP">vil forlate en side<br/>med dårlig funksjonalitet</p>
+                  <div className="sourceIcon">
+                    <div className="infoIcon"></div>
+                  </div>
+                </div>
+                <div className="statBox">
+                  <p className="statBoxTitle">75%</p>
+                  <p className="statBoxP">av forbrukere mener merke-<br/>varer bør prioritere design.</p>
+                  <div className="sourceIcon">
+                    <div className="infoIcon"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="frontContent">
-        <div className="introductionView">
-          <div className="helloContainer">
-            <p>Hei, mitt navn er</p>
-            <h1>Adrian Aspevik</h1>
-          </div>
-          <div className="introductionDescription">
-            <p>Jeg er 26 år, og er en   <span>grafisk designer</span>   og   <span>frontend utvikler</span>   basert i Bergen.</p>
-          </div>
-          <div className="introductionButtons">
-            <div className="downloadCV">
-              <p>Last ned CV</p>
+      <div className="contactHookSection scrollSnap">
+        <div className="contactHookContainer">
+          <div className="contactLinks">
+            <div className="contactIcons">
+              <div className="linkedIn"></div>
+              <div className="gitHub"></div>
             </div>
-            <div className="portfolio">
-              <div className="arrivingSoon">
-                <p>Kommer</p>
-              </div>
-              <p className="portfolioText">Portfolie</p>
+            <div className="contactEmail">
+              <p>adrian@aspevik.com</p>
+              <div className="line"></div>
+            </div>
+            <div className="contactNumber">
+              <p>+47 992 50 743</p>
+              <div className="line"></div>
+            </div>
+            <div className="contactSectionButton">
+              <p>Kontakt</p>
             </div>
           </div>
+          <div className="contactsByeIllustration"></div>
         </div>
-        <div className="frontPortrait">
-          <div className="frontPicture"></div>
-          <div className="moreAbout">
-            <div className="moreAboutText"></div>
-          </div>
+        <div className="toTheTop" onClick={topPageClick}>
+          <div className="arrowUp"></div>
+          <p>Til toppen</p>
         </div>
       </div>
 
-      <div className="nextButton"></div>
-    </div>
-
-    <div className="myKnowledgeSection">
-      <div className="myKnowledgeContainer">
-        <h3>Min <span>kunnskap</span></h3>
-        <div className="knowledgeBoxes">
-          <div className="leftBoxes">
-            <div className="visuallCommunication">
-              <h6>Visuell kommunikasjon</h6>
-              <p>Grafisk design</p>
-              <p>Brandutvikling</p>
-              <p>Visuell identitet</p>
-            </div>
-            <div className="productDevelopment">
-              <h6>Produktutvikling</h6>
-              <p>Designsprint</p>
-              <p>SCRUB</p>
-              <p>Innovasjon og prototyping</p>
-              <p>Brukertesting</p>
+      <div className="footerSection scrollSnap">
+        <div className="footerContainer">
+          <div className="footerLeft">
+            <h6>© 2022, bygget<br/>og designet av</h6>
+            <p>Adrian<br/>Aspevik</p>
+            <div className="sourceCodeButton">
+              <p>Kildekode</p>
+              <div className="gitHubIcon"></div>
             </div>
           </div>
-          <div className="middleBoxes">
-            <div className="frontendDevelopment">
-              <h6>Frontend utvikling</h6>
-              <p>Apputvikling (iOS + Android)</p>
-              <p>Webutvikling</p>
-              <p>UX ogUIX design</p>
-              <p>Responsivt og dynamisk design</p>
-              <p>Søkemotor optimalisert (SEO)</p>
+          <div className="footerMiddle">
+            <div className="footerEmail">
+              <p>adrian@aspevik.com</p>
+              <div className="footerLine"></div>
             </div>
-            <div className="myBioHook">
-              <h6>Jeg digger å<br/>bygge ting!</h6>
-              <div className="myBioButton">
-                <p>Min bio</p>
-              </div>
+            <div className="footerNumber">
+              <p>+47 992 50 743</p>
+              <div className="footerLine"></div>
             </div>
           </div>
-          <div className="rightBox">
-            <h6>Teknologier</h6>
-            <div className="technologyGrid">
-              <div className="placeholderTech"></div>
+          <div className="footerRight">
+            <p>Linker</p>
+            <div className="linksFlex">
+              <div className="footerLinkedin"></div>
+              <div className="footerGit"></div>
             </div>
+            
           </div>
         </div>
       </div>
     </div>
     
-    <div className="didYouKnowSection">
-      <div className="centerDiv">
-        <div className="didYouKnowContainer">
-          <div className="didYouText">
-            <h6>Visste du at...</h6>
-            <p>Gjennom design og en god brukeropplevelse vil en kunne formidle
-              og danne et bedre forhold med målgruppen din? Design og brukeropplevelse 
-              beskrives ofte som en nøkkelfaktor for...
-            </p>
-          </div>
-          <div className="statBoxesContainer">
-            <div className="upperBoxes">
-              <div className="statBox fiftyMs">
-                <p className="statBoxTitle">50ms</p>
-                <p className="statBoxP">for å danne et<br/>førsteinntrykk.</p>
-                <div className="sourceIcon">
-                  <div className="infoIcon"></div>
-                </div>
-              </div>
-              <div className="statBox">
-                <p className="statBoxTitle">75%</p>
-                <p className="statBoxP">baserer troverdigheten av<br/>en merkevare på design.</p>
-                <div className="sourceIcon">
-                  <div className="infoIcon"></div>
-                </div>
-              </div>
-            </div>
-            <div className="lowerBoxes">
-            <div className="statBox">
-                <p className="statBoxTitle">42%</p>
-                <p className="statBoxP">vil forlate en side<br/>med dårlig funksjonalitet</p>
-                <div className="sourceIcon">
-                  <div className="infoIcon"></div>
-                </div>
-              </div>
-              <div className="statBox">
-                <p className="statBoxTitle">75%</p>
-                <p className="statBoxP">av forbrukere mener merke-<br/>varer bør prioritere design.</p>
-                <div className="sourceIcon">
-                  <div className="infoIcon"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div className="contactHookSection">
-      <div className="contactHookContainer">
-        <div className="contactLinks">
-          <div className="contactIcons">
-            <div className="linkedIn"></div>
-            <div className="gitHub"></div>
-          </div>
-          <div className="contactEmail">
-            <p>adrian@aspevik.com</p>
-            <div className="line"></div>
-          </div>
-          <div className="contactNumber">
-            <p>+47 992 50 743</p>
-            <div className="line"></div>
-          </div>
-          <div className="contactSectionButton">
-            <p>Kontakt</p>
-          </div>
-        </div>
-        <div className="contactsByeIllustration"></div>
-      </div>
-      <div className="toTheTop">
-        <div className="arrowUp"></div>
-        <p>Til toppen</p>
-      </div>
-    </div>
-
-    <div className="footerSection">
-      <div className="footerContainer">
-        <div className="footerLeft">
-          <h6>© 2022, bygget<br/>og designet av</h6>
-          <p>Adrian<br/>Aspevik</p>
-          <div className="sourceCodeButton">
-            <p>Kildekode</p>
-            <div className="gitHubIcon"></div>
-          </div>
-        </div>
-        <div className="footerMiddle">
-          <div className="footerEmail">
-            <p>adrian@aspevik.com</p>
-            <div className="footerLine"></div>
-          </div>
-          <div className="footerNumber">
-            <p>+47 992 50 743</p>
-            <div className="footerLine"></div>
-          </div>
-        </div>
-        <div className="footerRight">
-          <p>Linker</p>
-          <div className="linksFlex">
-            <div className="footerLinkedin"></div>
-            <div className="footerGit"></div>
-          </div>
-          
-        </div>
-      </div>
-    </div>
   </Layout>
-)
+  )
+}
 
 /**
  * Head export to define metadata for the page
