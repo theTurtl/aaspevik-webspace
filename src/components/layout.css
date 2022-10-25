@@ -419,6 +419,20 @@ span {
 	transition: ease all .05s;
 }
 
+.nextButton2 {
+	background-image: url(../images/nextButton.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	width: 90px;
+	height: 90px;
+	margin: auto;
+	transition: ease all .05s;
+	display: none;
+}
+
+
+
 .nextButton:hover {
 	cursor: pointer;
 	animation: enlarger 0.5s forwards infinite;
@@ -454,7 +468,7 @@ span {
 
 .knowledgeBoxes {
 	margin: 100px 80px;
-	display: grid;
+	display: flex;
 	grid-template-columns: auto auto auto;
 	gap: 14px;
 }
@@ -534,6 +548,21 @@ span {
 	height: 100vh;
 }
 
+/*.didYouKnowContainer {
+	display: flex;
+	margin: 80px;
+	background-color: var(--accent);
+	max-width: 1270px;
+	width: 1400px;
+	margin: auto;
+	padding: 50px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 42px;
+} */
+
 .didYouKnowContainer {
 	display: flex;
 	margin: 80px;
@@ -547,7 +576,7 @@ span {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	border-radius: 42px;
-}
+} 
 
 .didYouText {
 	flex: 50%;
@@ -1130,13 +1159,14 @@ span {
 	.landingPageHeroView {
 		margin: 0px;
 		margin-top: 8px;
+		height: 100vh;
 		scroll-snap-align: start;
 		min-height: max-content;
 		
 	}
 
 	.landingPageNavBar {
-		margin: 16px;
+		margin: 32px;
 		align-items: center;
 		justify-content: space-between;
 	}
@@ -1174,7 +1204,7 @@ span {
 		width: 256px;
 		height: 256px;
 		width: 100%;
-
+		margin-bottom: 32px;
 	}
 
 	.frontPicture {
@@ -1197,6 +1227,11 @@ span {
 
 	.frontContent {
 		width: max-content;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		margin-top: 32px;
 	}
 
 	.introductionView {
@@ -1205,17 +1240,18 @@ span {
 	}
 
 	.helloContainer p {
-		font-size: 16px;
+		font-size: 18px;
 	}
 
 	.helloContainer h1 {
-		font-size: 42px;
+		font-size: 44px;
 	}
 
 	.introductionDescription {
 		margin-top: 16px;
-		font-size: 16px;
+		font-size: 24px;
 	}
+
 
 	.introductionButtons {
 		margin-top: 34px;
@@ -1225,8 +1261,198 @@ span {
 		font-size: 16px;
 	}
 
-	.nextButton {
+	.nextButton2 {
 		height: 64px;
-		margin-top: 160px;
+		margin-top: 0px;
+		display: inherit;
+		margin-top: 32px;
+	}
+
+	.nextButton {
+		display: none;
+	}
+
+
+	.myKnowledgeSection {
+
+		min-height: 100vh;
+		height: max-content;
+		margin: 32px;
+		scroll-snap-type: none;
+		scroll-snap-type: none;
+	}
+
+	.scrollSnap {
+		scroll-snap-type: none;
+		scroll-snap-type: none;
+	}
+
+	.scrollContainer {
+		scroll-snap-type: none;
+		scroll-snap-type: none;
+	}
+	
+	.myKnowledgeContainer h3 {
+		line-height: 1.4;
+		font-size: 48px;
+	}
+
+	.myKnowledgeContainer {
+		padding-top: 32px;
+	}
+
+	.knowledgeBoxes {
+		flex-direction: column;
+		margin: 32px 0px;
+	}
+
+	.placeholderTech {
+		height: 440px;
+		width: 100%;
+	}
+
+	.didYouKnowSection {
+		height: 100vh;
+	}
+
+	.didYouKnowContainer {
+		display: flex;
+		margin: 0px;
+		max-width: none;
+		width: 375px;
+		margin: auto;
+		padding: 0px;
+		position: absolute;
+		height: max-content;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 42px 42px 32px 32px;
+		flex-direction: column;
+		margin: 64px 0px;
+	}
+
+
+
+	.didYouText h6 {
+		font-size: 48px;
+	}
+	
+	.didYouText p {
+		font-size: 18px;
+	}
+
+	.statBoxesContainer {
+		flex-direction: column;
+		padding: 16px;
+	}
+
+	.statBoxTitle {
+		font-size: 26px;
+	}
+
+	.statBoxP {
+		font-size: 14px;
+	}
+
+	.statBoxes {
+
+	}
+
+	.lowerBoxes {
+		flex-direction: row;
+		width: 100%;
+		
+	}
+
+	.upperBoxes {
+		flex-direction: row;
+		width: 100%;
+	}
+
+	.statBox {
+		padding: 16px;
+		border-radius: 24px;
+	}
+
+	.contactHookSection {
+		height: max-content;
+		padding: 64px 0px;
+		width: 100%;
+
+	}
+
+	.contactHookContainer {
+		flex-direction: column-reverse;
+		width: 375px;
+	}
+
+	.linkedIn, .gitHub {
+		width: 80px;
+		height: 80px;
+	}
+
+	.contactsByeIllustration {
+		width: 300px;
+		height: 300px;
+		margin-left: 0;
+		margin: auto;
+		margin-bottom: 42px;
+	}
+
+	.contactLinks {
+		width: max-content;
+		margin: auto;
+
+	}
+
+	.contactNumber {
+		margin-bottom: 32px;
+	}
+
+	.footerContainer {
+		gap: 0px;
+		justify-content: space-between;
+		
+		width: 300px;
+	}
+
+	.footerMiddle {
+		display: none;
+	}
+
+
+	.aboutMeBanner {
+		flex-direction: column-reverse;
+		border-radius: 8px 8px 32px 32px;
+	}
+
+
+	.roundPortrait {
+		width: 300px;
+		height: 300px;
+		margin: auto;
+		margin-top: 64px;
+	}
+
+	.aboutMeBannerLeft {
+		padding: 16px;
+	}
+
+	.aboutMeBannerLeft h5 {
+		font-size: 48px;
+		margin-top: 32px;
+	}
+
+	.whoAmISection {
+		padding: 16px;
+	}
+
+	.whoAmISection h4 {
+		font-size: 48px;
+	}
+
+	.whoAmIDivider {
+		flex-direction: column-reverse;
 	}
 }

@@ -34,8 +34,8 @@ const IndexPage = () => {
     <div className="scrollContainer">
       <div className="landingPageHeroView scrollSnap" ref={top}>
         <NavBar click={toKnowledgeClick}/>
-
         <div className="frontContent">
+          <div className="nextButton2" onClick={nextPageClick}></div>
           <div className="introductionView">
             <div className="helloContainer">
               <p>Hei, mitt navn er</p>
@@ -184,10 +184,10 @@ const IndexPage = () => {
           </div>
           <div className="contactsByeIllustration"></div>
         </div>
-        <div className="toTheTop" onClick={topPageClick}>
+        {/*<div className="toTheTop" onClick={topPageClick}>
           <div className="arrowUp"></div>
           <p>Til toppen</p>
-        </div>
+        </div>*/}
       </div>
 
       <div className="footerSection scrollSnap">
