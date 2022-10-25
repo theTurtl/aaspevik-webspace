@@ -30,6 +30,11 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+  ],
+}
+
+module.exports = {
+  plugins: [
     {
       resolve: `gatsby-omni-font-loader`,
       options: {
@@ -37,11 +42,11 @@ module.exports = {
         preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
         web: [
           {
-            name: `Quicksand`,
-            file: `https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap`,
+            name: `Open Sans`,
+            file: `https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap`,
           },
         ],
       },
     },
-  ],
+  ]
 }
