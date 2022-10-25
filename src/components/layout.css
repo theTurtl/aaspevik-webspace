@@ -542,11 +542,13 @@ span {
 .didYouKnowSection {
 	min-height: 100vh;
 	max-height: var(--maxHeight);
+	padding: 16px;
 }
 
 .centerDiv {
 	position: relative;
 	height: 100vh;
+	padding: 16px;
 }
 
 /*.didYouKnowContainer {
@@ -566,12 +568,12 @@ span {
 
 .didYouKnowContainer {
 	display: flex;
-	margin: 80px;
+	margin: 0px;
 	background-color: var(--accent);
-	max-width: 1270px;
-	width: 1400px;
+	max-width: 1370px;
+	width: 100%;
 	margin: auto;
-	padding: 50px;
+	padding: 0px;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -582,7 +584,7 @@ span {
 .didYouText {
 	flex: 50%;
 	color: var(--blackfade);
-	padding: 50px;
+	padding: 100px;
 }
 
 .didYouText h6{
@@ -599,7 +601,8 @@ span {
 
 .statBoxesContainer {
 	flex: 50%;
-	margin-right: 4px;
+	margin: 50px;
+	
 }
 
 .upperBoxes {
@@ -1155,7 +1158,10 @@ span {
 	}
 } */
 
-@media screen and (max-width: 390px) {
+
+
+
+@media screen and (max-width: 860px) {
 	
 	.landingPageHeroView {
 		margin: 0px;
@@ -1163,6 +1169,410 @@ span {
 		height: 100vh;
 		scroll-snap-align: start;
 		min-height: max-content;
+		
+	}
+
+	.landingPageNavBar {
+		margin: 32px;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.welcomeContainer {
+		width: max-content;
+		font-size: 14px;
+		height: max-content;
+		
+	}
+
+	.availabilityStatus {
+		display: none;
+	}
+
+	.navMiddle, .navRight {
+		display: none;
+	}
+
+	.navLeft {
+		margin: 0;
+		padding: 0;
+		float: left;
+	}
+
+	.mobileMenu {
+
+		visibility: visible;
+		height: 36px;
+		width: 36px;
+		float: right;
+	}
+
+	.frontPortrait {
+		width: 256px;
+		height: 256px;
+		width: 100%;
+		margin-bottom: 32px;
+	}
+
+	.frontPicture {
+		width: 208px;
+		height: 208px;
+		margin-top: 24px;
+	}
+
+	.moreAbout {
+		width: 96px;
+		height: 96px;
+		transform: translateX(-8px);
+	}
+
+	.moreAboutText {
+		width: 64px;
+		height: 64px;
+		margin-top: 16px;
+	}
+
+	.frontContent {
+		width: max-content;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		margin-top: 32px;
+	}
+
+	.introductionView {
+		margin: auto;
+		width: 320px;
+	}
+
+	.helloContainer p {
+		font-size: 18px;
+	}
+
+	.helloContainer h1 {
+		font-size: 44px;
+	}
+
+	.introductionDescription {
+		margin-top: 16px;
+		font-size: 24px;
+	}
+
+
+	.introductionButtons {
+		margin-top: 34px;
+	}
+
+	.downloadCV p, .portfolioText {
+		font-size: 16px;
+	}
+
+	.nextButton2 {
+		height: 64px;
+		margin-top: 0px;
+		display: inherit;
+		margin-top: 32px;
+	}
+
+	.nextButton {
+		display: none;
+	}
+
+	.scrollSnap {
+		scroll-snap-type: none;
+		scroll-snap-type: none;
+	}
+
+	.scrollContainer {
+		scroll-snap-type: none;
+		scroll-snap-type: none;
+	}
+
+	.myKnowledgeSection {
+
+		min-height: 100vh;
+		height: max-content;
+		margin: 32px;
+		scroll-snap-type: none;
+		scroll-snap-type: none;
+	}
+
+	
+	
+	.myKnowledgeContainer h3 {
+		line-height: 1.4;
+		font-size: 48px;
+	}
+
+	.myKnowledgeContainer {
+		padding-top: 32px;
+	}
+
+	.knowledgeBoxes {
+		flex-direction: column;
+		margin: 32px 0px;
+	}
+
+	.placeholderTech {
+		height: 440px;
+		width: 100%;
+	}
+
+	.didYouKnowSection {
+		height: 100vh;
+		min-height: max-content;
+		margin: 128px 0px;
+	}
+
+	.didYouKnowContainer {
+		display: flex;
+		margin: 0px;
+		width: 100%;
+		max-width: 375px;
+		margin: auto;
+		padding: 0px;
+		position: absolute;
+		height: max-content;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 42px 42px 32px 32px;
+		flex-direction: column;
+		margin: 64px 0px;
+	}
+
+	.didYouText {
+		padding: 42px;
+	}
+
+	.didYouText h6 {
+		font-size: 48px;
+	}
+	
+	.didYouText p {
+		font-size: 18px;
+	}
+
+	.statBoxesContainer {
+		flex-direction: column;
+		padding: 16px;
+		margin: 0px;
+	}
+
+	.statBoxTitle {
+		font-size: 26px;
+	}
+
+	.statBoxP {
+		font-size: 14px;
+	}
+
+	.statBoxes {
+
+	}
+
+	.lowerBoxes {
+		flex-direction: row;
+		width: 100%;
+		
+	}
+
+	.upperBoxes {
+		flex-direction: row;
+		width: 100%;
+	}
+
+	.statBox {
+		padding: 16px;
+		border-radius: 24px;
+	}
+
+	.contactHookSection {
+		height: max-content;
+		padding: 64px 0px;
+		width: 100%;
+
+	}
+
+	.contactHookContainer {
+		flex-direction: column-reverse;
+		width: 375px;
+	}
+
+	.linkedIn, .gitHub {
+		width: 80px;
+		height: 80px;
+	}
+
+	.contactsByeIllustration {
+		width: 300px;
+		height: 300px;
+		margin-left: 0;
+		margin: auto;
+		margin-bottom: 42px;
+	}
+
+	.contactLinks {
+		width: max-content;
+		margin: auto;
+
+	}
+
+	.contactNumber {
+		margin-bottom: 32px;
+	}
+
+	.footerContainer {
+		gap: 0px;
+		justify-content: space-between;
+		
+		width: 300px;
+	}
+
+	.footerMiddle {
+		display: none;
+	}
+
+
+	.aboutMeBanner {
+		flex-direction: column-reverse;
+		border-radius: 8px 8px 32px 32px;
+	}
+
+
+	.roundPortrait {
+		width: 300px;
+		height: 300px;
+		margin: auto;
+		margin-top: 64px;
+	}
+
+	.aboutMeBannerLeft {
+		padding: 16px;
+	}
+
+	.aboutMeBannerLeft h5 {
+		font-size: 48px;
+		margin-top: 32px;
+	}
+
+	.whoAmISection {
+		padding: 16px;
+	}
+
+	.whoAmISection h4 {
+		font-size: 48px;
+	}
+
+	.whoAmIDivider {
+		flex-direction: column-reverse;
+	}
+}
+
+@media  screen and (max-width: 1280px) {
+
+	.landingPageNavBar {
+		margin: 32px;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.welcomeContainer {
+		width: max-content;
+		font-size: 14px;
+		height: max-content;
+		
+	}
+
+	.availabilityStatus {
+		display: none;
+	}
+
+	.navMiddle, .navRight {
+		display: none;
+	}
+
+	.navLeft {
+		margin: 0;
+		padding: 0;
+		float: left;
+	}
+
+	.mobileMenu {
+
+		visibility: visible;
+		height: 36px;
+		width: 36px;
+		float: right;
+	}
+
+	.myKnowledgeSection {
+
+		min-height: 100vh;
+		height: max-content;
+		margin: 32px;
+		scroll-snap-type: none;
+		scroll-snap-type: none;
+	}
+
+	.scrollSnap {
+		scroll-snap-type: none;
+		scroll-snap-type: none;
+	}
+
+	.scrollContainer {
+		scroll-snap-type: none;
+		scroll-snap-type: none;
+	}
+	
+	.myKnowledgeContainer h3 {
+		line-height: 1.4;
+		font-size: 48px;
+	}
+
+	.myKnowledgeContainer {
+		padding-top: 32px;
+		max-width: 800px;
+	}
+
+	.knowledgeBoxes {
+		flex-direction: column;
+		margin: 32px 0px;
+	}
+
+	.placeholderTech {
+		height: 440px;
+		width: 100%;
+	}
+
+
+
+
+	.didYouKnowSection {
+		height: 100vh;
+	}
+
+	
+
+	
+	
+
+	
+
+}
+
+
+
+@media screen and (max-width: 560px) {
+	
+	.landingPageHeroView {
+		margin: 0px;
+		margin-top: 8px;
+		height: 100vh;
+		scroll-snap-align: start;
+		min-height: max-content;
+		margin-bottom: 128px;
 		
 	}
 
