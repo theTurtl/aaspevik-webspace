@@ -68,7 +68,7 @@ const IndexPage = () => {
         <div className="nextButton" onClick={nextPageClick}></div>
       </div>
 
-      <div className="myKnowledgeSection scrollSnap" ref={ref}>
+      <div className="myKnowledgeSection" ref={ref}>
         <div className="myKnowledgeContainer">
           <h3>Min <span>kunnskap</span></h3>
           <div className="knowledgeBoxes">

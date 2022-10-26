@@ -71,8 +71,6 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .scrollContainer {
 	scroll-snap-type: y mandatory;
-	overflow-y: scroll;
-	height: 100vh;
 }
 
 .scrollSnap {
@@ -83,7 +81,8 @@ p, h1, h2, h3, h4, h5, h6 {
 	position: relative;
 	padding-top: 0.5px;
 	max-height: var(--maxHeight);
-	min-height: 100vh;
+	margin-bottom: 64px;
+
 }
 
 .landingPageNavBar {
@@ -256,7 +255,6 @@ p, h1, h2, h3, h4, h5, h6 {
 	margin: auto;
 	gap: 180px;
 	transition: ease all .5s;
-	
 }
 
 .introductionView {
@@ -451,7 +449,6 @@ span {
 
 .myKnowledgeSection {
 	position: relative;
-	min-height: 100vh;
 	max-height: var(--maxHeight);
 }
 
@@ -540,14 +537,13 @@ span {
 /* -------------------- Did you know section -------------------- */
 
 .didYouKnowSection {
-	min-height: 100vh;
+	margin-top: 204px;
 	max-height: var(--maxHeight);
 	padding: 16px;
 }
 
 .centerDiv {
 	position: relative;
-	height: 100vh;
 	padding: 16px;
 }
 
@@ -574,10 +570,6 @@ span {
 	width: 100%;
 	margin: auto;
 	padding: 0px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 	border-radius: 42px;
 } 
 
@@ -669,17 +661,15 @@ span {
 /* ---------------- Contact hook section ----------------- */
 
 .contactHookSection {
+	margin: 220px 0px;
 	position: relative;
-	min-height: 100vh;
-	max-height: var(--maxHeight);
+	width: 100%;
 }
 
 .contactHookContainer {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 	display: flex;
+	width: max-content;
+	margin: auto;
 }
 
 .contactIcons {
