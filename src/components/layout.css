@@ -593,7 +593,7 @@ span {
 .statBoxesContainer {
 	flex: 50%;
 	margin: 50px;
-	
+	background-color: red;
 }
 
 .upperBoxes {
@@ -1153,12 +1153,10 @@ span {
 @media screen and (max-width: 860px) {
 	
 	.landingPageHeroView {
-		margin: 0px;
-		margin-top: 8px;
 		height: 100vh;
 		scroll-snap-align: start;
 		min-height: max-content;
-		
+		background-color: red;
 	}
 
 	.landingPageNavBar {
@@ -1855,4 +1853,30 @@ span {
 	.whoAmIDivider {
 		flex-direction: column-reverse;
 	}
+}
+
+@media screen and (max-width: 1350px) {
+	.didYouKnowContainer {
+		flex-direction: column;
+	}
+
+	/*.statBoxesContainer {
+		display: flex;
+		flex: 50%;
+		margin: 50px;
+		background-color: red;
+		flex-direction: column;
+		width: max-content;
+	}
+
+	.upperBoxes {
+		position: relative;
+		display: flex;
+		align-self: flex-end;
+		gap: 16px;
+		float: right;
+		margin-top: 16px;
+		width: max-content;
+	
+	}*/
 }
