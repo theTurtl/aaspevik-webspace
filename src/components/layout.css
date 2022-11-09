@@ -63,11 +63,10 @@ table {
 	--darkergray: #E7E0DF;
 	--minHeight: 880px;
 	background-color: var(--white);
-}
-
-p, h1, h2, h3, h4, h5, h6 {
 	font-family: 'Quicksand', sans-serif;
 }
+
+
 
 .scrollContainer {
 	scroll-snap-type: y mandatory;

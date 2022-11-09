@@ -5,7 +5,9 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@fontsource/quicksand": "^4.5.11",
     "gatsby": "^4.24.4",
+    "gatsby-omni-font-loader": "^2.0.2",
     "gatsby-plugin-image": "^2.24.0",
     "gatsby-plugin-manifest": "^4.24.0",
     "gatsby-plugin-sharp": "^4.24.0",
@@ -13,7 +15,8 @@
     "gatsby-transformer-sharp": "^4.24.0",
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {
     "prettier": "^2.7.1"
