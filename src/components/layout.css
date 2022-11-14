@@ -157,6 +157,7 @@ table {
 	margin: auto;
 	flex: right;
 	gap: 128px;
+	transition: ease-in-out 0.5s;
 }
 
 .knowledgeButton {
@@ -1271,9 +1272,7 @@ span {
 }
 
 @media screen and (max-width: 1024px) {
-	.landingPageHeroView {
-	background-color: red;
-	}
+
 
 	.frontPortrait {
 		width: 480px;
@@ -1372,7 +1371,7 @@ span {
 	.moreAbout {
 		width: 96px;
 		height: 96px;
-		transform: translateX(-8px);
+		transform: translateX(128px);
 	}
 
 	.moreAboutText {
@@ -2127,6 +2126,10 @@ span {
 	.didYouText p {
 		max-width: 460px;
 		margin-bottom: -32px;
+	}
+
+	.navMiddle {
+		gap: 64px;
 	}
 }
 
