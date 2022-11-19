@@ -156,7 +156,7 @@ table {
 	width: max-content;
 	margin: auto;
 	flex: right;
-	gap: 128px;
+	gap: 208px;
 	transition: ease-in-out 0.5s;
 }
 

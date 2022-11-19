@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
@@ -26,8 +26,11 @@ const IndexPage = () => {
   }
 
   const toKnowledgeClick = () => {
+    navigate('/AboutMe')
     ref.current?.scrollIntoView({behavior: 'smooth'});
   }
+
+
 
   return (
   <Layout>
@@ -37,7 +40,7 @@ const IndexPage = () => {
     <Seo title="Hjem" />
     <div className="scrollContainer">
       <div className="landingPageHeroView scrollSnap" ref={top}>
-        <NavBar click={toKnowledgeClick}/>
+        <NavBar isFrontActive={true} />
         <div className="frontContent">
           <div className="nextButton2" onClick={nextPageClick}></div>
           <div className="introductionView">

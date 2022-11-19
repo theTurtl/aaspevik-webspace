@@ -5,10 +5,13 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import NavBar from "../components/NavBar"
 
-const AboutMe = () => (
+const AboutMe = () => {
+
+
+  return (
   <Layout>
     <div className="aboutMePage">
-      <NavBar />
+      <NavBar isFrontActive={false}/>
       <div className="aboutMeBanner">
         <div className="aboutMeBannerLeft">
           <h5>Heisann :)</h5>
@@ -112,7 +115,8 @@ const AboutMe = () => (
       </div>
     </div>
   </Layout>
-)
+  )
+}
 
 export const Head = () => <Seo title="Page two" />
 
