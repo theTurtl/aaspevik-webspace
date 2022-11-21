@@ -4,11 +4,7 @@ import Layout from "./layout";
 import { useState } from "react";
 
 
-const NavBar = ({click, isFrontActive}) => {
-
-    const [frontActive, setFrontActive] = useState("#909090");
-    const [aboutActive, setAboutActive] = useState("#000000");
-
+const NavBar = ({click, isFrontActive, mobileNavSwitch}) => {
     var accentColorFront = "#B3EACB"
     var accentColorAbout = "#E1DBDA"
 
@@ -58,8 +54,9 @@ const NavBar = ({click, isFrontActive}) => {
                     <p>Kontakt</p>
                     </div>
                 </div>
-                <div className="mobileMenu"></div>
+                <div className="mobileMenu" onClick={mobileNavSwitch}></div>
             </div>
+            
         </Layout>
     )
 }

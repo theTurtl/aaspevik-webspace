@@ -14,6 +14,7 @@ const IndexPage = () => {
   const ref = React.useRef(null);
   const top = React.useRef(null);
   const [isVisible, setIsVisible] = React.useState(true);
+  const [mobileNavActive, setMobileNavActive] = React.useState("none");
 
 
   const nextPageClick = () => {
@@ -30,6 +31,14 @@ const IndexPage = () => {
     ref.current?.scrollIntoView({behavior: 'smooth'});
   }
 
+  const mobileNavSwitch = () => {
+    if (mobileNavActive === "none") {
+      setMobileNavActive("");
+    } else {
+      setMobileNavActive("none");
+    }
+  }
+
 
 
   return (
@@ -40,7 +49,36 @@ const IndexPage = () => {
     <Seo title="Hjem" />
     <div className="scrollContainer">
       <div className="landingPageHeroView scrollSnap" ref={top}>
-        <NavBar isFrontActive={true} />
+      <div className="mobileNav" style={{display: mobileNavActive}}>
+                <div className="topMobileNav">
+                    <div className="exitMobileNav" onClick={mobileNavSwitch}></div>
+                    <div className="mobileStatusBar">
+                        <p>Ledig</p>
+                        <div className="okIcon"></div>
+                    </div>
+                </div>
+                <div className="mobileNavLinks">
+                    <p>Om meg</p>
+                    <p>Min kunnskap</p>
+                    <p>Kontakt</p>
+                </div>
+                <div className="mobileSocials">
+                    <div className="linkIcons">
+                        <div className="mobileLinkd"></div>
+                        <div className="mobileGit"></div>
+                    </div>
+                    <div className="contactMobile">
+                        <p>adrian@aspevik.com</p>
+                        <div className="mobileAccentLine"></div>
+                    </div>
+                    <div className="contactMobile">
+                        <p>+47 992 50 743</p>
+                        <div className="mobileAccentLine"></div>
+                    </div>
+                </div>
+            </div>
+        <NavBar isFrontActive={true} mobileNavSwitch={mobileNavSwitch}/>
+        
         <div className="frontContent">
           <div className="nextButton2" onClick={nextPageClick}></div>
           <div className="introductionView">
