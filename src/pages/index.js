@@ -15,6 +15,7 @@ const IndexPage = () => {
   const top = React.useRef(null);
   const [isVisible, setIsVisible] = React.useState(true);
   const [mobileNavActive, setMobileNavActive] = React.useState("none");
+  const [pageActive, setPageActive] = React.useState("");
 
 
   const nextPageClick = () => {
@@ -34,8 +35,10 @@ const IndexPage = () => {
   const mobileNavSwitch = () => {
     if (mobileNavActive === "none") {
       setMobileNavActive("");
+      setPageActive("none")
     } else {
       setMobileNavActive("none");
+      setPageActive("")
     }
   }
 
@@ -47,36 +50,37 @@ const IndexPage = () => {
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
   </Helmet>
     <Seo title="Hjem" />
-    <div className="scrollContainer">
-      <div className="landingPageHeroView scrollSnap" ref={top}>
-      <div className="mobileNav" style={{display: mobileNavActive}}>
-                <div className="topMobileNav">
-                    <div className="exitMobileNav" onClick={mobileNavSwitch}></div>
-                    <div className="mobileStatusBar">
-                        <p>Ledig</p>
-                        <div className="okIcon"></div>
-                    </div>
-                </div>
-                <div className="mobileNavLinks">
-                    <p>Om meg</p>
-                    <p>Min kunnskap</p>
-                    <p>Kontakt</p>
-                </div>
-                <div className="mobileSocials">
-                    <div className="linkIcons">
-                        <div className="mobileLinkd"></div>
-                        <div className="mobileGit"></div>
-                    </div>
-                    <div className="contactMobile">
-                        <p>adrian@aspevik.com</p>
-                        <div className="mobileAccentLine"></div>
-                    </div>
-                    <div className="contactMobile">
-                        <p>+47 992 50 743</p>
-                        <div className="mobileAccentLine"></div>
-                    </div>
-                </div>
-            </div>
+    <div className="mobileNav" style={{display: mobileNavActive}}>
+      <div className="topMobileNav">
+        <div className="exitMobileNav" onClick={mobileNavSwitch}></div>
+        <div className="mobileStatusBar">
+            <p>Ledig</p>
+            <div className="okIcon"></div>
+        </div>
+      </div>
+      <div className="mobileNavLinks">
+        <p>Om meg</p>
+        <p>Min kunnskap</p>
+        <p>Kontakt</p>
+      </div>
+      <div className="mobileSocials">
+        <div className="linkIcons">
+          <div className="mobileLinkd"></div>
+          <div className="mobileGit"></div>
+        </div>
+        <div className="contactMobile">
+          <p>adrian@aspevik.com</p>
+          <div className="mobileAccentLine"></div>
+        </div>
+        <div className="contactMobile">
+          <p>+47 992 50 743</p>
+          <div className="mobileAccentLine"></div>
+        </div>
+      </div>
+    </div>
+    <div className="scrollContainer" style={{display: pageActive}}>
+      <div className="landingPageHeroView scrollSnap" ref={top} >
+        
         <NavBar isFrontActive={true} mobileNavSwitch={mobileNavSwitch}/>
         
         <div className="frontContent">
@@ -175,32 +179,40 @@ const IndexPage = () => {
                 <div className="statBox fiftyMs">
                   <p className="statBoxTitle">50ms</p>
                   <p className="statBoxP">for å danne et<br/>førsteinntrykk.</p>
-                  <div className="sourceIcon">
-                    <div className="infoIcon"></div>
-                  </div>
+                  <a href="https://cxl.com/blog/first-impressions-matter-the-importance-of-great-visual-design/" target="_blank">
+                    <div className="sourceIcon" >
+                      <div className="infoIcon"></div>
+                    </div>
+                  </a>
                 </div>
                 <div className="statBox">
                   <p className="statBoxTitle">75%</p>
                   <p className="statBoxP">baserer troverdigheten av<br/>en merkevare på design.</p>
-                  <div className="sourceIcon">
-                    <div className="infoIcon"></div>
-                  </div>
+                  <a href="https://www.kinesisinc.com/the-truth-about-web-design/" target={"_blank"}>
+                    <div className="sourceIcon">
+                      <div className="infoIcon"></div>
+                    </div>
+                  </a>
                 </div>
               </div>
               <div className="lowerBoxes">
               <div className="statBox">
                   <p className="statBoxTitle">42%</p>
                   <p className="statBoxP">vil forlate en side<br/>med dårlig funksjonalitet</p>
-                  <div className="sourceIcon">
-                    <div className="infoIcon"></div>
-                  </div>
+                  <a href="https://topdesignfirms.com/web-design/blog/website-redesign-checklist" target={"_blank"}>
+                    <div className="sourceIcon">
+                      <div className="infoIcon"></div>
+                    </div>
+                  </a>
                 </div>
                 <div className="statBox">
-                  <p className="statBoxTitle">75%</p>
+                  <p className="statBoxTitle">50%</p>
                   <p className="statBoxP">av forbrukere mener merke-<br/>varer bør prioritere design.</p>
-                  <div className="sourceIcon">
-                    <div className="infoIcon"></div>
-                  </div>
+                  <a href="https://topdesignfirms.com/web-design/blog/website-redesign-checklist" target={"_blank"}>
+                    <div className="sourceIcon">
+                      <div className="infoIcon"></div>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>

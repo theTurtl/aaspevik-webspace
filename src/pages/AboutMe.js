@@ -7,11 +7,53 @@ import NavBar from "../components/NavBar"
 
 const AboutMe = () => {
 
+  const [mobileNavActive, setMobileNavActive] = React.useState("none");
+  const [pageActive, setPageActive] = React.useState("");
+
+  const mobileNavSwitch = () => {
+    if (mobileNavActive === "none") {
+      setMobileNavActive("");
+      setPageActive("none")
+    } else {
+      setMobileNavActive("none");
+      setPageActive("")
+    }
+  }
+
 
   return (
   <Layout>
-    <div className="aboutMePage">
-      <NavBar isFrontActive={false}/>
+    <div className="mobileNav" style={{display: mobileNavActive}}>
+      <div className="topMobileNav">
+        <div className="exitMobileNav" onClick={mobileNavSwitch}></div>
+        <div className="mobileStatusBar">
+            <p>Ledig</p>
+            <div className="okIcon"></div>
+        </div>
+      </div>
+      <div className="mobileNavLinks">
+        <p>Om meg</p>
+        <p>Min kunnskap</p>
+        <p>Kontakt</p>
+      </div>
+      <div className="mobileSocials">
+        <div className="linkIcons">
+          <div className="mobileLinkd"></div>
+          <div className="mobileGit"></div>
+        </div>
+        <div className="contactMobile">
+          <p>adrian@aspevik.com</p>
+          <div className="mobileAccentLine"></div>
+        </div>
+        <div className="contactMobile">
+          <p>+47 992 50 743</p>
+          <div className="mobileAccentLine"></div>
+        </div>
+      </div>
+    </div>
+    <div className="aboutMePage" style={{display: pageActive}}>
+        
+      <NavBar isFrontActive={false} mobileNavSwitch={mobileNavSwitch} />
       <div className="aboutMeBanner">
         <div className="aboutMeBannerLeft">
           <h5>Heisann :)</h5>
