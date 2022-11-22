@@ -99,7 +99,7 @@ const IndexPage = () => {
             </div>
             <div className="introductionButtons">
               <div className="downloadCV">
-                <p>Last ned CV</p>
+                <p>Om meg</p>
               </div>
               <div className="portfolio">
                 <div className="arrivingSoon">

@@ -227,6 +227,7 @@ table {
 }
 
 .contactButton {
+	position: relative;
 	padding: 19px 33px;
 	background-color: var(--blackfade);
 	color: var(--white);
@@ -235,6 +236,93 @@ table {
 	font-weight: 600;
 	color: var(--white);
 }
+
+.contactAnimation {
+	position: absolute;
+	background-color: var(--accent);
+	border: 0px solid var(--accent);
+	opacity: 0.4;
+	border-radius: 28px;
+	z-index: -1;
+	animation: pulsater 2s ease-in-out forwards infinite;
+}
+
+.contactAnimation2 {
+	position: absolute;
+	background-color: var(--accent);
+	border: 0px solid var(--accent);
+	opacity: 0.2;
+	border-radius: 48px;
+	z-index: -2;
+	animation: pulsater2 2s ease-in-out forwards infinite;
+	
+}
+
+
+
+@keyframes pulsater {
+	0% {
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+	}
+	25% {
+		top: -14px;
+		bottom: -14px;
+		right: -16px;
+		left: -16px;
+	}
+	50% {
+		top: -14px;
+		bottom: -14px;
+		right: -16px;
+		left: -16px;
+	}
+
+	75% {
+		top: -14px;
+		bottom: -14px;
+		right: -16px;
+		left: -16px;
+	}
+	100% {
+		top: -14px;
+		bottom: -14px;
+		right: -16px;
+		left: -16px;
+		opacity: 0;
+	}
+}
+
+@keyframes pulsater2 {
+	0% {
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+	}
+	50% {
+		top: -56px;
+		bottom: -56px;
+		right: -64px;
+		left: -64px;
+	}
+	75% {
+		top: -56px;
+		bottom: -56px;
+		right: -64px;
+		left: -64px;
+	}
+	100% {
+		top: -56px;
+		bottom: -56px;
+		right: -64px;
+		left: -64px;
+		opacity: 0;
+	}
+}
+
 
 .mobileMenu {
 	background-image: url(../images/menu.svg);
