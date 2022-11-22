@@ -861,7 +861,7 @@ span {
 .footerSection {
 	position: relative;
 	height: 336px;
-	background-color: var(--black);
+	background-color: var(--blackfade);
 } 
 
 .footerContainer {
