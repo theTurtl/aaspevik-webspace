@@ -117,13 +117,12 @@ table {
 
 
 .availabilityStatus {
-	padding: 16px 20px;
+	padding: 21px 26px;
 	background-color: var(--accent);
 	width: max-content;
 	display: flex;
 	border-radius: 16px;
 	float: right;
-	height: 18px;
 	font-weight: 500;
 }
 

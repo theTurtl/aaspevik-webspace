@@ -25,10 +25,7 @@ const NavBar = ({click, isFrontActive, mobileNavSwitch}) => {
                         <p>Hyggelig å treffe deg! :)</p>
                     </div>
                     </Link>
-                    <div className="availabilityStatus">
-                    <p>Ledig</p>
-                    <div className="availabilityIcon"></div>
-                    </div>
+                    
                 </div>
                 <div className="navMiddle">
                     <Link to="/" style={{textDecoration: 'none'}}>
@@ -46,9 +43,13 @@ const NavBar = ({click, isFrontActive, mobileNavSwitch}) => {
                     </Link>
                 </div>
                 <div className="navRight">
-                    <div className="languageMenu">
+                    {/*<div className="languageMenu">
                     <p>NO</p>
                     <div className="arrowDown"></div>
+                    </div>*/}
+                    <div className="availabilityStatus">
+                    <p>Ledig</p>
+                    <div className="availabilityIcon"></div>
                     </div>
                     <div className="contactButton">
                     <p>Kontakt</p>
