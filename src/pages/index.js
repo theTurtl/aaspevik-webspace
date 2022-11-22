@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
@@ -14,6 +14,8 @@ const IndexPage = () => {
   const ref = React.useRef(null);
   const top = React.useRef(null);
   const [isVisible, setIsVisible] = React.useState(true);
+  const [mobileNavActive, setMobileNavActive] = React.useState("none");
+  const [pageActive, setPageActive] = React.useState("");
 
 
   const nextPageClick = () => {
@@ -26,8 +28,21 @@ const IndexPage = () => {
   }
 
   const toKnowledgeClick = () => {
+    navigate('/AboutMe')
     ref.current?.scrollIntoView({behavior: 'smooth'});
   }
+
+  const mobileNavSwitch = () => {
+    if (mobileNavActive === "none") {
+      setMobileNavActive("");
+      setPageActive("none")
+    } else {
+      setMobileNavActive("none");
+      setPageActive("")
+    }
+  }
+
+
 
   return (
   <Layout>
@@ -35,9 +50,43 @@ const IndexPage = () => {
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
   </Helmet>
     <Seo title="Hjem" />
-    <div className="scrollContainer">
-      <div className="landingPageHeroView scrollSnap" ref={top}>
-        <NavBar click={toKnowledgeClick}/>
+    <div className="mobileNav" style={{display: mobileNavActive}}>
+      <div className="topMobileNav">
+        <div className="exitMobileNav" onClick={mobileNavSwitch}></div>
+        <div className="mobileStatusBar">
+            <p>Ledig</p>
+            <div className="okIcon"></div>
+        </div>
+      </div>
+      <div className="mobileNavLinks">
+        <p>Om meg</p>
+        <p>Min kunnskap</p>
+        <p>Kontakt</p>
+      </div>
+      <div className="mobileSocials">
+        <div className="linkIcons">
+          <div className="mobileLinkd"></div>
+          <div className="mobileGit"></div>
+        </div>
+        <a href="mailto:adrian@aspevik.com" style={{textDecoration: 'none'}}>
+          <div className="contactMobile">
+            <p>adrian@aspevik.com</p>
+            <div className="mobileAccentLine"></div>
+          </div>
+        </a>
+        <a href="tel:+4799250743" style={{textDecoration: 'none'}}>
+          <div className="contactMobile">
+            <p>+47 992 50 743</p>
+            <div className="mobileAccentLine"></div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div className="scrollContainer" style={{display: pageActive}}>
+      <div className="landingPageHeroView scrollSnap" ref={top} >
+        
+        <NavBar isFrontActive={true} mobileNavSwitch={mobileNavSwitch}/>
+        
         <div className="frontContent">
           <div className="nextButton2" onClick={nextPageClick}></div>
           <div className="introductionView">
@@ -62,11 +111,12 @@ const IndexPage = () => {
           </div>
           <div className="frontPortrait">
             <div className="frontPicture"></div>
-            <Link to="/AboutMe">
+            
+            {/*<Link to="/AboutMe">
               <div className="moreAbout">
                 <div className="moreAboutText"></div>
               </div>
-            </Link>
+            </Link>*/}
           </div>
         </div>
         <div className="nextButton" onClick={nextPageClick}></div>
@@ -134,32 +184,40 @@ const IndexPage = () => {
                 <div className="statBox fiftyMs">
                   <p className="statBoxTitle">50ms</p>
                   <p className="statBoxP">for å danne et<br/>førsteinntrykk.</p>
-                  <div className="sourceIcon">
-                    <div className="infoIcon"></div>
-                  </div>
+                  <a href="https://cxl.com/blog/first-impressions-matter-the-importance-of-great-visual-design/" target="_blank">
+                    <div className="sourceIcon" >
+                      <div className="infoIcon"></div>
+                    </div>
+                  </a>
                 </div>
                 <div className="statBox">
                   <p className="statBoxTitle">75%</p>
                   <p className="statBoxP">baserer troverdigheten av<br/>en merkevare på design.</p>
-                  <div className="sourceIcon">
-                    <div className="infoIcon"></div>
-                  </div>
+                  <a href="https://www.kinesisinc.com/the-truth-about-web-design/" target={"_blank"}>
+                    <div className="sourceIcon">
+                      <div className="infoIcon"></div>
+                    </div>
+                  </a>
                 </div>
               </div>
               <div className="lowerBoxes">
               <div className="statBox">
                   <p className="statBoxTitle">42%</p>
                   <p className="statBoxP">vil forlate en side<br/>med dårlig funksjonalitet</p>
-                  <div className="sourceIcon">
-                    <div className="infoIcon"></div>
-                  </div>
+                  <a href="https://topdesignfirms.com/web-design/blog/website-redesign-checklist" target={"_blank"}>
+                    <div className="sourceIcon">
+                      <div className="infoIcon"></div>
+                    </div>
+                  </a>
                 </div>
                 <div className="statBox">
-                  <p className="statBoxTitle">75%</p>
+                  <p className="statBoxTitle">50%</p>
                   <p className="statBoxP">av forbrukere mener merke-<br/>varer bør prioritere design.</p>
-                  <div className="sourceIcon">
-                    <div className="infoIcon"></div>
-                  </div>
+                  <a href="https://topdesignfirms.com/web-design/blog/website-redesign-checklist" target={"_blank"}>
+                    <div className="sourceIcon">
+                      <div className="infoIcon"></div>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -174,14 +232,18 @@ const IndexPage = () => {
               <div className="linkedIn"></div>
               <div className="gitHub"></div>
             </div>
-            <div className="contactEmail">
-              <p>adrian@aspevik.com</p>
-              <div className="line"></div>
-            </div>
-            <div className="contactNumber">
-              <p>+47 992 50 743</p>
-              <div className="line"></div>
-            </div>
+            <a href="mailto:adrian@aspevik.com" style={{textDecoration: 'none'}}>
+              <div className="contactEmail">
+                <p>adrian@aspevik.com</p>
+                <div className="line"></div>
+              </div>
+            </a>
+            <a href="tel:+4799250743" style={{textDecoration: 'none'}}>
+              <div className="contactNumber">
+                <p>+47 992 50 743</p>
+                <div className="line"></div>
+              </div>
+            </a>
             <div className="contactSectionButton">
               <p>Kontakt</p>
             </div>
@@ -199,26 +261,36 @@ const IndexPage = () => {
           <div className="footerLeft">
             <h6>© 2022, bygget<br/>og designet av</h6>
             <p>Adrian<br/>Aspevik</p>
-            <div className="sourceCodeButton">
-              <p>Kildekode</p>
-              <div className="gitHubIcon"></div>
-            </div>
+            <a href="https://github.com/theTurtl/aaspevik-webspace" target={"_blank"} style={{textDecoration: 'none'}}>
+              <div className="sourceCodeButton">
+                <p>Kildekode</p>
+                <div className="gitHubIcon"></div>
+              </div>
+            </a>
           </div>
           <div className="footerMiddle">
-            <div className="footerEmail">
-              <p>adrian@aspevik.com</p>
-              <div className="footerLine"></div>
-            </div>
-            <div className="footerNumber">
-              <p>+47 992 50 743</p>
-              <div className="footerLine"></div>
-            </div>
+            <a href="mailto:adrian@aspevik.com" style={{textDecoration: 'none'}}>
+              <div className="footerEmail">
+                <p>adrian@aspevik.com</p>
+                <div className="footerLine"></div>
+              </div>
+            </a>
+            <a href="tel:+4799250743" style={{textDecoration: 'none'}}>
+              <div className="footerNumber">
+                <p>+47 992 50 743</p>
+                <div className="footerLine"></div>
+              </div>
+            </a>
           </div>
           <div className="footerRight">
             <p>Linker</p>
             <div className="linksFlex">
-              <div className="footerLinkedin"></div>
-              <div className="footerGit"></div>
+              <a href="https://www.linkedin.com/in/adrian-aspevik-037aa117a" target={"_blank"}>
+                <div className="footerLinkedin"></div>
+              </a>
+              <a href="https://github.com/theTurtl/aaspevik-webspace" target={"_blank"}>
+                <div className="footerGit"></div>
+              </a>
             </div>
             
           </div>
