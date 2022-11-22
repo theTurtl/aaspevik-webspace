@@ -107,11 +107,12 @@ const IndexPage = () => {
           </div>
           <div className="frontPortrait">
             <div className="frontPicture"></div>
-            <Link to="/AboutMe">
+            
+            {/*<Link to="/AboutMe">
               <div className="moreAbout">
                 <div className="moreAboutText"></div>
               </div>
-            </Link>
+            </Link>*/}
           </div>
         </div>
         <div className="nextButton" onClick={nextPageClick}></div>
