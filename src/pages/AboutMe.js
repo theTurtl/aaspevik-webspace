@@ -41,14 +41,18 @@ const AboutMe = () => {
           <div className="mobileLinkd"></div>
           <div className="mobileGit"></div>
         </div>
-        <div className="contactMobile">
-          <p>adrian@aspevik.com</p>
-          <div className="mobileAccentLine"></div>
-        </div>
-        <div className="contactMobile">
-          <p>+47 992 50 743</p>
-          <div className="mobileAccentLine"></div>
-        </div>
+        <a href="mailto:adrian@aspevik.com" style={{textDecoration: 'none'}}>
+          <div className="contactMobile">
+            <p>adrian@aspevik.com</p>
+            <div className="mobileAccentLine"></div>
+          </div>
+        </a>
+        <a href="tel:+4799250743" style={{textDecoration: 'none'}}>
+          <div className="contactMobile">
+            <p>+47 992 50 743</p>
+            <div className="mobileAccentLine"></div>
+          </div>
+        </a>
       </div>
     </div>
     <div className="aboutMePage" style={{display: pageActive}}>
@@ -137,20 +141,28 @@ const AboutMe = () => {
           </div>
         </div>
         <div className="footerMiddle">
-          <div className="footerEmail">
-            <p>adrian@aspevik.com</p>
-            <div className="footerLine"></div>
-          </div>
-          <div className="footerNumber">
-            <p>+47 992 50 743</p>
-            <div className="footerLine"></div>
-          </div>
+          <a href="mailto:adrian@aspevik.com" style={{textDecoration: 'none'}}>
+            <div className="footerEmail">
+              <p>adrian@aspevik.com</p>
+              <div className="footerLine"></div>
+            </div>
+          </a>
+          <a href="tel:+4799250743" style={{textDecoration: 'none'}}>
+            <div className="footerNumber">
+              <p>+47 992 50 743</p>
+              <div className="footerLine"></div>
+            </div>
+          </a>
         </div>
         <div className="footerRight">
           <p>Linker</p>
           <div className="linksFlex">
-            <div className="footerLinkedin"></div>
-            <div className="footerGit"></div>
+            <a href="https://www.linkedin.com/in/adrian-aspevik-037aa117a" target={"_blank"}>
+              <div className="footerLinkedin"></div>
+            </a>
+            <a href="https://github.com/theTurtl/aaspevik-webspace" target={"_blank"}>
+              <div className="footerGit"></div>
+            </a>
           </div>
           
         </div>

@@ -68,14 +68,18 @@ const IndexPage = () => {
           <div className="mobileLinkd"></div>
           <div className="mobileGit"></div>
         </div>
-        <div className="contactMobile">
-          <p>adrian@aspevik.com</p>
-          <div className="mobileAccentLine"></div>
-        </div>
-        <div className="contactMobile">
-          <p>+47 992 50 743</p>
-          <div className="mobileAccentLine"></div>
-        </div>
+        <a href="mailto:adrian@aspevik.com" style={{textDecoration: 'none'}}>
+          <div className="contactMobile">
+            <p>adrian@aspevik.com</p>
+            <div className="mobileAccentLine"></div>
+          </div>
+        </a>
+        <a href="tel:+4799250743" style={{textDecoration: 'none'}}>
+          <div className="contactMobile">
+            <p>+47 992 50 743</p>
+            <div className="mobileAccentLine"></div>
+          </div>
+        </a>
       </div>
     </div>
     <div className="scrollContainer" style={{display: pageActive}}>
@@ -228,14 +232,18 @@ const IndexPage = () => {
               <div className="linkedIn"></div>
               <div className="gitHub"></div>
             </div>
-            <div className="contactEmail">
-              <p>adrian@aspevik.com</p>
-              <div className="line"></div>
-            </div>
-            <div className="contactNumber">
-              <p>+47 992 50 743</p>
-              <div className="line"></div>
-            </div>
+            <a href="mailto:adrian@aspevik.com" style={{textDecoration: 'none'}}>
+              <div className="contactEmail">
+                <p>adrian@aspevik.com</p>
+                <div className="line"></div>
+              </div>
+            </a>
+            <a href="tel:+4799250743" style={{textDecoration: 'none'}}>
+              <div className="contactNumber">
+                <p>+47 992 50 743</p>
+                <div className="line"></div>
+              </div>
+            </a>
             <div className="contactSectionButton">
               <p>Kontakt</p>
             </div>
@@ -253,26 +261,36 @@ const IndexPage = () => {
           <div className="footerLeft">
             <h6>© 2022, bygget<br/>og designet av</h6>
             <p>Adrian<br/>Aspevik</p>
-            <div className="sourceCodeButton">
-              <p>Kildekode</p>
-              <div className="gitHubIcon"></div>
-            </div>
+            <a href="https://github.com/theTurtl/aaspevik-webspace" target={"_blank"} style={{textDecoration: 'none'}}>
+              <div className="sourceCodeButton">
+                <p>Kildekode</p>
+                <div className="gitHubIcon"></div>
+              </div>
+            </a>
           </div>
           <div className="footerMiddle">
-            <div className="footerEmail">
-              <p>adrian@aspevik.com</p>
-              <div className="footerLine"></div>
-            </div>
-            <div className="footerNumber">
-              <p>+47 992 50 743</p>
-              <div className="footerLine"></div>
-            </div>
+            <a href="mailto:adrian@aspevik.com" style={{textDecoration: 'none'}}>
+              <div className="footerEmail">
+                <p>adrian@aspevik.com</p>
+                <div className="footerLine"></div>
+              </div>
+            </a>
+            <a href="tel:+4799250743" style={{textDecoration: 'none'}}>
+              <div className="footerNumber">
+                <p>+47 992 50 743</p>
+                <div className="footerLine"></div>
+              </div>
+            </a>
           </div>
           <div className="footerRight">
             <p>Linker</p>
             <div className="linksFlex">
-              <div className="footerLinkedin"></div>
-              <div className="footerGit"></div>
+              <a href="https://www.linkedin.com/in/adrian-aspevik-037aa117a" target={"_blank"}>
+                <div className="footerLinkedin"></div>
+              </a>
+              <a href="https://github.com/theTurtl/aaspevik-webspace" target={"_blank"}>
+                <div className="footerGit"></div>
+              </a>
             </div>
             
           </div>

@@ -51,9 +51,11 @@ const NavBar = ({click, isFrontActive, mobileNavSwitch}) => {
                     <p>Ledig</p>
                     <div className="availabilityIcon"></div>
                     </div>
-                    <div className="contactButton">
-                    <p>Kontakt</p>
-                    </div>
+                    <a href="mailto:adrian@aspevik.com" style={{textDecoration: 'none'}}>
+                        <div className="contactButton">
+                        <p>Kontakt</p>
+                        </div>
+                    </a>
                 </div>
                 <div className="mobileMenu" onClick={mobileNavSwitch}></div>
             </div>
