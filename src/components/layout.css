@@ -203,7 +203,7 @@ table {
 
 .navRight {
 	display: flex;
-	gap: 24px;
+	gap: 64px;
 }
 
 .languageMenu {
@@ -241,7 +241,7 @@ table {
 	position: absolute;
 	background-color: var(--accent);
 	border: 0px solid var(--accent);
-	opacity: 0.4;
+	opacity: 0.6;
 	border-radius: 28px;
 	z-index: -1;
 	animation: pulsater 2s ease-in-out forwards infinite;
