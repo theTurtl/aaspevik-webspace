@@ -1030,6 +1030,7 @@ span {
 	font-size: 70px;
 	font-weight: 600;
 	margin-bottom: 64px;
+	color: var(--blackfade);
 }
 
 .whoAmIDivider {
@@ -1078,7 +1079,7 @@ span {
 	height: 64px;
 	background-color: var(--white);
 	border-radius: 32px;
-	margin-right: 32px;
+	margin-right: 16px;
 }
 
 .quoteHeader {

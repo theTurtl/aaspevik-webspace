@@ -85,9 +85,8 @@ const AboutMe = () => {
         <div className="whoAmIDivider">
           <div className="whoAmILeft">
             <div className="partOne">
-              <h6>Part 1</h6>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
-                sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+              <h6>En kort introduksjon</h6>
+              <p>Å være</p>
             </div>
             <div className="partTwo">
               <h6>Part 1</h6>
