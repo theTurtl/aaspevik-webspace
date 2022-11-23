@@ -54,6 +54,8 @@ const NavBar = ({click, isFrontActive, mobileNavSwitch}) => {
                     <a href="mailto:adrian@aspevik.com" style={{textDecoration: 'none'}}>
                         <div className="contactButton">
                         <p>Kontakt</p>
+                        <div className="contactAnimation"></div>
+                        <div className="contactAnimation2"></div>
                         </div>
                     </a>
                 </div>
