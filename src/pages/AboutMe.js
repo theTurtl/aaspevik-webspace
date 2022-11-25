@@ -85,9 +85,10 @@ const AboutMe = () => {
         <div className="whoAmIDivider">
           <div className="whoAmILeft">
             <div className="partOne">
-              <h6>Part 1</h6>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
-                sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+              <h6>En introduksjon</h6>
+              <p>Jeg er en grafisk designer og frontend utvikler som er veldig interessert i 
+
+              </p>
             </div>
             <div className="partTwo">
               <h6>Part 1</h6>
@@ -121,11 +122,11 @@ const AboutMe = () => {
                 <p>Student på 3. året i frontend og mobilutvikling bachelor.</p>
               </div>
             </div>
-            <div className="myInterestSection">
+            {/*<div className="myInterestSection">
               <p>Mine interesser</p>
               <div className="pointsField">
               </div>
-            </div>
+  </div>*/}
           </div>
         </div>
       </div>
