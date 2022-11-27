@@ -874,6 +874,8 @@ span {
 	gap: 256px;
 }
 
+
+
 .footerLeft {
 	background-color:#E1DBDA20;
 	padding: 12px;
@@ -978,6 +980,7 @@ span {
 
 .aboutMePage {
 	margin-bottom: 128px;
+	padding: 16px;
 }
 
 .aboutMeBanner {
@@ -987,6 +990,7 @@ span {
 	margin: auto;
 	border-radius: 80px;
 	display: flex;
+	
 }
 
 .aboutMeBannerLeft h5 {
@@ -1067,7 +1071,7 @@ span {
 .quoteSection {
 	background-color: var(--blackfade);
 	padding: 32px;
-	max-width: 448px;
+	
 	color: var(--white);
 	font-size: 20px;
 	line-height: 1.4;
@@ -1242,6 +1246,16 @@ span {
 	margin-top: 12px;
 }
 
+
+
+
+
+
+
+
+
+
+/* -------- Media queryies --------- */
 
 @media screen and (max-width: 1600px){
 	.frontContent {
@@ -1431,9 +1445,6 @@ span {
 		height: 100vh;
 	}
 
-	.didYouText {
-		margin-bottom: -32px;
-	}
 
 	.landingPageHeroView{
 		min-height: max-content;
@@ -1665,7 +1676,7 @@ span {
 		display: flex;
 		margin: 0px;
 		width: 100%;
-		max-width: 375px;
+		max-width: 370px;
 		margin: auto;
 		padding: 0px;
 		height: max-content;
@@ -1689,6 +1700,7 @@ span {
 		flex-direction: column;
 		padding: 16px;
 		margin: 0px;
+		min-width: 338px;
 	}
 
 	.statBoxTitle {
@@ -1696,21 +1708,20 @@ span {
 	}
 
 	.statBoxP {
-		font-size: 14px;
+		font-size: 16px;
 	}
 
 	.statBoxes {
-
+		width: 100%;
 	}
 
 	.lowerBoxes {
-		flex-direction: row;
+		flex-direction: column;
 		width: 100%;
-		
 	}
 
 	.upperBoxes {
-		flex-direction: row;
+		flex-direction: column;
 		width: 100%;
 	}
 
@@ -1781,6 +1792,7 @@ span {
 
 	.aboutMeBannerLeft {
 		padding: 16px;
+		
 	}
 
 	.aboutMeBannerLeft h5 {
@@ -1916,7 +1928,14 @@ span {
 	.contactEmail p, .contactNumber p {
 		font-size: 25px;
 	}
+	.didYouText {
+		padding: 48px;
+		background-color: blue;
+		width: 180px;
+	}
 }
+
+
 
 @media screen and (max-width: 425px) {
 	.upperBoxes {
@@ -1930,7 +1949,23 @@ span {
 	.statBox {
 		width: auto;
 	}
+
+	.didYouKnowContainer {
+		max-width: 312px;
+		margin: auto;
+	}
+
+	.statBoxesContainer {
+		min-width: 280px;
+
+	}
+
+	.didYouText {
+		padding: 48px;
+		width: none;
+	}
 }
+
 
 
 /*
@@ -2244,6 +2279,13 @@ span {
 
 @media screen and (max-width: 1350px) {
 
+
+
+
+
+
+
+
 	/*.didYouKnowContainer {
 		flex-direction: column;
 	}
@@ -2324,6 +2366,53 @@ span {
 	.navMiddle {
 		gap: 64px;
 	}
+
+	.roundPortrait {
+		display: none;
+		
+	}
 }
+
+@media screen and (max-width: 525px) {
+	.roundPortrait {
+		display: inherit;
+	}
+}
+
+
+@media screen and (max-width: 375px){
+	.didYouText {
+		padding: 38px;
+	}
+
+	.didYouKnowContainer {
+		max-width: 290px;
+	}
+
+	.statBoxesContainer {
+		min-width: 273px;
+	}
+
+	.landingPageHeroView {
+		margin-bottom: 256px;
+	}
+
+	.didYouKnowSection {
+		margin-bottom: 384px;
+	}
+	
+	.footerContainer {
+		gap: 0px;
+	}
+
+	.roundPortrait {
+		width: 248px;
+		height: 248px;
+	}
+}
+
+
+
+
 
 
