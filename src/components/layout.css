@@ -569,11 +569,13 @@ span {
 	font-size: 22px;
 	font-weight: 700;
 	margin-bottom: 18px;
+
 }
 
 .visuallCommunication p, .productDevelopment p, .frontendDevelopment p {
 	font-size: 19px;
 	margin-top: 8px;
+
 }
 
 .productDevelopment {
@@ -613,7 +615,7 @@ span {
 }
 
 .placeholderTech {
-	background-image: url(../images/placeholderTech.svg);
+	background-image: url(../images/technologies.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
