@@ -22,10 +22,16 @@ const NavBar = ({click, isFrontActive, mobileNavSwitch}) => {
                 <div className="navLeft">
                     <Link to="/" style={{textDecoration: 'none'}}>
                     <div className="welcomeContainer">
+                    <div className="logo">
+                            <p>A.A</p>
+                        </div>
                         <p>Hyggelig å treffe deg! :)</p>
                     </div>
                     </Link>
-                    
+                    <div className="availabilityStatus">
+                    <p>Ledig</p>
+                    <div className="availabilityIcon"></div>
+                    </div>
                 </div>
                 <div className="navMiddle">
                     <Link to="/" style={{textDecoration: 'none'}}>
@@ -47,10 +53,7 @@ const NavBar = ({click, isFrontActive, mobileNavSwitch}) => {
                     <p>NO</p>
                     <div className="arrowDown"></div>
                     </div>*/}
-                    <div className="availabilityStatus">
-                    <p>Ledig</p>
-                    <div className="availabilityIcon"></div>
-                    </div>
+                    
                     <a href="mailto:adrian@aspevik.com" style={{textDecoration: 'none'}}>
                         <div className="contactButton">
                         <p>Kontakt</p>

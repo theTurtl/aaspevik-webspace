@@ -94,30 +94,51 @@ table {
 	grid-column: auto;
 }
 
+.logo {
+	width: 56px;
+	height: 42px;
+	margin: -12px 16px 0px -16px;
+	background-color: var(--blackfade);
+	color: var(--white);
+	border-radius: 12px;
+}
+
+.logo p {
+	width: 100%;
+	text-align: center;
+	height: 100%;
+	font-size: 20px;
+	font-weight: 900;
+	line-height: 2.1;
+}
+
 .welcomeContainer {
-	border: 2px solid var(--gray);
-	background-color: var(--gray);
+	border: 2px solid var(--whitefaded);
+	background-color: var(--whitefaded);
 	max-width: max-content;
 	padding: 14px 18px;
 	border-radius: 16px;
 	color: var(--blackfade);
 	font-weight: 500;
-	margin-right: 16px;
+	margin-right: 8px;
 	height: 18px;
+	display: flex;
 }
 
 .welcomeContainer:hover {
-	animation: homeButton 0.2s forwards;
+	animation: homeButton 1s forwards;
 }
 
 @keyframes homeButton {
 	0% {}
-	100% {background-color: var(--blackfade); color: var(--white);}
+	75% {background-color: var(--blackfade); color: var(--white);}
+	100% {background-color: var(--whitefaded); color: var(--blackfade);}
 }
 
 
 .availabilityStatus {
-	padding: 21px 26px;
+	padding: 17px 18px;
+	height: max-content;
 	background-color: var(--accent);
 	width: max-content;
 	display: flex;
