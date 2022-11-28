@@ -55,9 +55,10 @@ const AboutMe = () => {
         </a>
       </div>
     </div>
+    <NavBar isFrontActive={false} mobileNavSwitch={mobileNavSwitch} />
     <div className="aboutMePage" style={{display: pageActive}}>
         
-      <NavBar isFrontActive={false} mobileNavSwitch={mobileNavSwitch} />
+      
       <div className="aboutMeBanner">
         <div className="aboutMeBannerLeft">
           <h5>Heisann :)</h5>

@@ -1930,7 +1930,6 @@ span {
 	}
 	.didYouText {
 		padding: 48px;
-		background-color: blue;
 		width: 180px;
 	}
 }
@@ -2386,11 +2385,11 @@ span {
 	}
 
 	.didYouKnowContainer {
-		max-width: 290px;
+		max-width: 270px;
 	}
 
 	.statBoxesContainer {
-		min-width: 273px;
+		min-width: 220px;
 	}
 
 	.landingPageHeroView {
