@@ -1399,8 +1399,7 @@ span {
 	.welcomeContainer {
 		width: max-content;
 		font-size: 14px;
-		height: max-content;
-		
+		max-height: max-content;
 	}
 
 	.availabilityStatus {
@@ -1417,13 +1416,14 @@ span {
 		float: left;
 	}
 
-	.mobileMenu {
 
+	.mobileMenu {
 		visibility: visible;
 		height: 36px;
 		width: 36px;
 		float: right;
 	}
+
 
 	.myKnowledgeSection {
 
@@ -1556,7 +1556,7 @@ span {
 	.welcomeContainer {
 		width: max-content;
 		font-size: 14px;
-		height: max-content;
+		max-height: max-content;
 		
 	}
 
@@ -1934,6 +1934,8 @@ span {
 
 	.welcomeContainer {
 		font-size: 12px;
+		max-width: max-content;
+		max-height: max-content;
 	}
 
 	.landingPageHeroView {
@@ -2403,6 +2405,11 @@ span {
 
 
 @media screen and (max-width: 375px){
+
+	.logo {
+		display: none;
+	}
+
 	.didYouText {
 		padding: 38px;
 	}

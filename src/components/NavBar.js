@@ -4,9 +4,11 @@ import Layout from "./layout";
 import { useState } from "react";
 
 
-const NavBar = ({click, isFrontActive, mobileNavSwitch}) => {
+const NavBar = ({click, isFrontActive, pageHider}) => {
     var accentColorFront = "#B3EACB"
     var accentColorAbout = "#E1DBDA"
+    const [mobileNavActive, setMobileNavActive] = React.useState("none");
+    const [pageActive, setPageActive] = React.useState("");
 
     if (isFrontActive) {
         accentColorFront = "#B3EACB"
@@ -16,8 +18,51 @@ const NavBar = ({click, isFrontActive, mobileNavSwitch}) => {
         accentColorAbout = "#B3EACB"
     }
 
+
+    const mobileNavSwitch = () => {
+        if (mobileNavActive === "none") {
+          setMobileNavActive("");
+          pageHider()
+        } else {
+          setMobileNavActive("none");
+          pageHider()
+        }
+      }
+
     return (
         <Layout>
+            <div className="mobileNav" style={{display: mobileNavActive}}>
+      <div className="topMobileNav">
+        <div className="exitMobileNav" onClick={mobileNavSwitch}></div>
+        <div className="mobileStatusBar">
+            <p>Ledig</p>
+            <div className="okIcon"></div>
+        </div>
+      </div>
+      <div className="mobileNavLinks">
+        <p>Om meg</p>
+        <p>Min kunnskap</p>
+        <p>Kontakt</p>
+      </div>
+      <div className="mobileSocials">
+        <div className="linkIcons">
+          <div className="mobileLinkd"></div>
+          <div className="mobileGit"></div>
+        </div>
+        <a href="mailto:adrian@aspevik.com" style={{textDecoration: 'none'}}>
+          <div className="contactMobile">
+            <p>adrian@aspevik.com</p>
+            <div className="mobileAccentLine"></div>
+          </div>
+        </a>
+        <a href="tel:+4799250743" style={{textDecoration: 'none'}}>
+          <div className="contactMobile">
+            <p>+47 992 50 743</p>
+            <div className="mobileAccentLine"></div>
+          </div>
+        </a>
+      </div>
+    </div>
             <div className="landingPageNavBar">
                 <div className="navLeft">
                     <Link to="/" style={{textDecoration: 'none'}}>

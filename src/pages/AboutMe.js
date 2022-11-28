@@ -7,55 +7,21 @@ import NavBar from "../components/NavBar"
 
 const AboutMe = () => {
 
-  const [mobileNavActive, setMobileNavActive] = React.useState("none");
-  const [pageActive, setPageActive] = React.useState("");
+  const [pageActive, setPageActive] = React.useState("inherit");
 
-  const mobileNavSwitch = () => {
-    if (mobileNavActive === "none") {
-      setMobileNavActive("");
+  const hidePage = () => {
+    if (pageActive === "inherit") {
       setPageActive("none")
     } else {
-      setMobileNavActive("none");
-      setPageActive("")
+      setPageActive("inherit")
     }
   }
 
 
   return (
   <Layout>
-    <div className="mobileNav" style={{display: mobileNavActive}}>
-      <div className="topMobileNav">
-        <div className="exitMobileNav" onClick={mobileNavSwitch}></div>
-        <div className="mobileStatusBar">
-            <p>Ledig</p>
-            <div className="okIcon"></div>
-        </div>
-      </div>
-      <div className="mobileNavLinks">
-        <p>Om meg</p>
-        <p>Min kunnskap</p>
-        <p>Kontakt</p>
-      </div>
-      <div className="mobileSocials">
-        <div className="linkIcons">
-          <div className="mobileLinkd"></div>
-          <div className="mobileGit"></div>
-        </div>
-        <a href="mailto:adrian@aspevik.com" style={{textDecoration: 'none'}}>
-          <div className="contactMobile">
-            <p>adrian@aspevik.com</p>
-            <div className="mobileAccentLine"></div>
-          </div>
-        </a>
-        <a href="tel:+4799250743" style={{textDecoration: 'none'}}>
-          <div className="contactMobile">
-            <p>+47 992 50 743</p>
-            <div className="mobileAccentLine"></div>
-          </div>
-        </a>
-      </div>
-    </div>
-    <NavBar isFrontActive={false} mobileNavSwitch={mobileNavSwitch} />
+    <Seo title="Om meg" />
+    <NavBar isFrontActive={false} pageHider={hidePage} />
     <div className="aboutMePage" style={{display: pageActive}}>
         
       
