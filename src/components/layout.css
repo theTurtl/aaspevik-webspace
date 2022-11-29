@@ -1173,7 +1173,7 @@ span {
 	height: 100vh;
 	width: 100%;
 	background-color: var(--white);
-	z-index: 1;
+	z-index: 10;
 }
 
 .topMobileNav {
@@ -1181,6 +1181,10 @@ span {
 	display: flex;
 	align-content: space-between;
 	margin: 80px 32px;
+}
+
+.mobileMenu:hover {
+	cursor: pointer;
 }
 
 .exitMobileNav {
@@ -1191,6 +1195,10 @@ span {
 	background-size: contain;
 	width: 36px;
 	height: 36px;
+}
+
+.exitMobileNav:hover {
+	cursor: pointer;
 }
 
 .mobileStatusBar {
@@ -1221,8 +1229,21 @@ span {
 	font-weight: 900;
 }
 
+.mobileNavLinks p:hover {
+	cursor: pointer;
+	background-color: var(--accent);
+	border: 8px solid var(--accent);
+}
+
 .mobileNavLinks p {
-	margin-top: 16px;
+	margin-top: 8px;
+	margin-left: -8px;
+	transition: 0.2s ease-in-out;
+	height: 48px;
+	line-height: 1.3;
+	border-radius: 8px;
+	width: max-content;
+	border: 8px solid var(--white);
 }
 
 .mobileSocials {
