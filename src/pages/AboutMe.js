@@ -116,7 +116,7 @@ const AboutMe = () => {
             </div>
           </a>
           <a href="tel:+4799250743" style={{textDecoration: 'none'}}>
-            <div className="footerNumber" style={{textDecoration: 'none'}}>
+            <div className="footerNumber" >
               <p>+47 992 50 743</p>
               <div className="footerLine"></div>
             </div>
