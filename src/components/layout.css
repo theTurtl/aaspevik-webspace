@@ -66,6 +66,18 @@ table {
 	font-family: 'Quicksand', sans-serif;
 }
 
+/* ------------ Scrollbar ------------ */
+
+	::-webkit-scrollbar-track {
+		background-color: var(--white);
+	}
+
+	::-webkit-scrollbar {
+		width: 0px;
+		
+	}
+
+/* ----------------------------------- */
 
 
 .scrollContainer {
@@ -256,6 +268,12 @@ table {
 	border-radius: 16px;
 	font-weight: 600;
 	color: var(--white);
+	transition: 0.5s ease-in-out;
+}
+
+.contactButton:hover {
+	cursor: pointer;
+	background-color: var(--black);
 }
 
 .contactAnimation {
@@ -406,6 +424,12 @@ table {
 	font-weight: 400;
 	margin-right: 14px;
 	
+}
+
+.downloadCV:hover {
+	cursor: pointer;
+	transition: 0.5s ease-in-out;
+	background-color: var(--black);
 }
 
 .portfolio {
@@ -843,6 +867,13 @@ span {
 	font-weight: 500;
 	color: var(--blackfade);
 	border-radius: 16px;
+	transition: 0.2s ease-in-out;
+}
+
+.contactSectionButton:hover {
+	cursor: pointer;
+	background-color: var(--blackfade);
+	color: var(--white)
 }
 
 .contactsByeIllustration {
