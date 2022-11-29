@@ -41,6 +41,9 @@ const IndexPage = () => {
     }
   }
 
+  const routeToAbout = () => {
+    navigate("AboutMe")
+  }
 
 
   return (
@@ -66,7 +69,7 @@ const IndexPage = () => {
               <p>Jeg er 26 år, og er en   <span>grafisk designer</span><br/>   og   <span>frontend utvikler</span>   basert i Bergen.</p>
             </div>
             <div className="introductionButtons">
-              <div className="downloadCV">
+              <div className="downloadCV" onClick={routeToAbout}>
                 <p>Om meg</p>
               </div>
               <div className="portfolio">
@@ -212,9 +215,11 @@ const IndexPage = () => {
                 <div className="line"></div>
               </div>
             </a>
-            <div className="contactSectionButton">
-              <p>Kontakt</p>
-            </div>
+            <a href="mailto:adrian@aspevik.com" style={{textDecoration: 'none'}}>
+              <div className="contactSectionButton">
+                <p>Kontakt</p>
+              </div>
+            </a>
           </div>
           <div className="contactsByeIllustration"></div>
         </div>

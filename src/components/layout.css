@@ -405,6 +405,7 @@ table {
 	font-size: 20px;
 	font-weight: 400;
 	margin-right: 14px;
+	
 }
 
 .portfolio {
@@ -1215,9 +1216,9 @@ span {
 
 .mobileNavLinks {
 	margin: 80px 32px;
-	color: var(--black);
+	color: var(--blackfade);
 	font-size: 36px;
-	font-weight: 600;
+	font-weight: 900;
 }
 
 .mobileNavLinks p {
@@ -1291,6 +1292,10 @@ span {
 
 	.moreAbout {
 		right: 132px;
+	}
+
+	.navMiddle {
+		gap: 128px;
 	}
 
 	/*
@@ -1398,7 +1403,6 @@ span {
 
 	.welcomeContainer {
 		width: max-content;
-		font-size: 14px;
 		max-height: max-content;
 	}
 
@@ -1935,7 +1939,7 @@ span {
 	.welcomeContainer {
 		font-size: 12px;
 		max-width: max-content;
-		max-height: max-content;
+		height: max-content;
 	}
 
 	.landingPageHeroView {
