@@ -1324,6 +1324,14 @@ span {
 
 
 
+/* -------------- Loading page ---------------- */
+
+.loadingPage {
+	height: 100%;
+	width: 100%;
+	background-color: red;
+}
+
 
 
 

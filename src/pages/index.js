@@ -7,6 +7,7 @@ import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 import NavBar from "../components/NavBar"
 import { Helmet } from "react-helmet"
+import Loader from "./Loader"
 
 
 const IndexPage = () => { 
@@ -15,7 +16,14 @@ const IndexPage = () => {
   const top = React.useRef(null);
   const [isVisible, setIsVisible] = React.useState(true);
   const [pageActive, setPageActive] = React.useState("inherit");
+  const [loading, setLoading] = React.useState(true);
 
+  React.useEffect(() => {
+    alert("test")
+    loading ? document.querySelector("body").classList.add("loadingPage")
+    : document.querySelector("body").classList.remove("loadingPage");
+    alert("test2")
+  }, [loading])
 
   const nextPageClick = () => {
     setIsVisible(false);
@@ -51,7 +59,11 @@ const IndexPage = () => {
     <Helmet>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
   </Helmet>
-    <Seo title="Hjem" />
+  <Seo title="Hjem" />
+    {loading ? (
+      <Loader setLoading={setLoading} />
+    ) : (<>
+    
     <NavBar isFrontActive={true} pageHider={hidePage}/>
     <div className="scrollContainer" style={{display: pageActive}}>
       <div className="landingPageHeroView scrollSnap" ref={top} >
@@ -270,7 +282,7 @@ const IndexPage = () => {
         </div>
       </div>
     </div>
-    
+    </>)}
   </Layout>
   )
 }
