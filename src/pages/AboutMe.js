@@ -140,6 +140,6 @@ const AboutMe = () => {
   )
 }
 
-export const Head = () => <Seo title="Page two" />
+export const Head = () => <Seo title="Om meg" />
 
 export default AboutMe
