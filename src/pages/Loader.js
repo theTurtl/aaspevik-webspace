@@ -41,7 +41,7 @@ const Loader = ({setLoading}) => {
         exit: {
             width: 0,
             height: 0,
-            transition: {delay: 4},
+            transition: {delay: 0},
             duration: 2
         }
     }
@@ -63,7 +63,7 @@ const Loader = ({setLoading}) => {
         exit: {
             width: 0,
             height: 0,
-            transition: {delay: 4},
+            transition: {delay: 0},
             duration: 2
         }
     }
@@ -84,10 +84,14 @@ const Loader = ({setLoading}) => {
             opacity: 0,
             width: 0,
             height: 0,
-            transition: {delay: 4},
+            transition: {delay: 0},
             duration: 2
         }
     }
+
+    {setTimeout(() => {
+        setLoading(false)
+    }, 4000)}
 
 
 
@@ -107,7 +111,7 @@ const Loader = ({setLoading}) => {
                     initial="hidden"
                     animate="show"
                     exit="exit" 
-                    onAnimationComplete={() => setLoading(false)}
+                    
                     >
                         <motion.div
                         className="loadingText"
