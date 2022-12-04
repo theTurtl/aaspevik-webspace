@@ -8,6 +8,7 @@ import * as styles from "../components/index.module.css"
 import NavBar from "../components/NavBar"
 import { Helmet } from "react-helmet"
 import Loader from "./Loader"
+import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion"
 
 
 const IndexPage = () => { 
@@ -19,10 +20,8 @@ const IndexPage = () => {
   const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
-    alert("test")
     loading ? document.querySelector("body").classList.add("loadingPage")
     : document.querySelector("body").classList.remove("loadingPage");
-    alert("test2")
   }, [loading])
 
   const nextPageClick = () => {
@@ -60,8 +59,14 @@ const IndexPage = () => {
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
   </Helmet>
   <Seo title="Hjem" />
+  <AnimateSharedLayout type="crossfade">
+    <AnimatePresence>
+
+    
     {loading ? (
-      <Loader setLoading={setLoading} />
+      <motion.div key={'loader'}>
+        <Loader setLoading={setLoading} />
+      </motion.div>
     ) : (<>
     
     <NavBar isFrontActive={true} pageHider={hidePage}/>
@@ -283,6 +288,8 @@ const IndexPage = () => {
       </div>
     </div>
     </>)}
+    </AnimatePresence>
+  </AnimateSharedLayout>
   </Layout>
   )
 }
