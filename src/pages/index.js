@@ -7,7 +7,6 @@ import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 import NavBar from "../components/NavBar"
 import { Helmet } from "react-helmet"
-import Loader from "./Loader"
 import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion"
 
 
@@ -19,26 +18,12 @@ const IndexPage = () => {
   const [pageActive, setPageActive] = React.useState("inherit");
   const [loading, setLoading] = React.useState(true);
 
-  React.useEffect(() => {
-    loading ? document.querySelector("body").classList.add("loadingPage")
-    : document.querySelector("body").classList.remove("loadingPage");
-  }, [loading])
+
 
   const nextPageClick = () => {
     setIsVisible(false);
     ref.current?.scrollIntoView({behavior: 'smooth'});
   }
-
-  const topPageClick = () => {
-    top.current?.scrollIntoView({behavior: 'smooth'});
-  }
-
-  const toKnowledgeClick = () => {
-    navigate('/AboutMe')
-    ref.current?.scrollIntoView({behavior: 'smooth'});
-  }
-
-
 
   const hidePage = () => {
     if (pageActive === "inherit") {
@@ -53,6 +38,8 @@ const IndexPage = () => {
   }
 
 
+
+
   return (
   <Layout>
     <Helmet>
@@ -60,15 +47,7 @@ const IndexPage = () => {
   </Helmet>
   <Seo title="Hjem" />
   <AnimateSharedLayout type="crossfade">
-    <AnimatePresence>
-
-    
-    {loading ? (
-      <motion.div key={'loader'}>
-        <Loader setLoading={setLoading} />
-      </motion.div>
-    ) : (<>
-    
+    <AnimatePresence>    
     <NavBar isFrontActive={true} pageHider={hidePage}/>
     <div className="scrollContainer" style={{display: pageActive}}>
       <div className="landingPageHeroView scrollSnap" ref={top} >
@@ -287,7 +266,6 @@ const IndexPage = () => {
         </div>
       </div>
     </div>
-    </>)}
     </AnimatePresence>
   </AnimateSharedLayout>
   </Layout>

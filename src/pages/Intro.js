@@ -1,8 +1,10 @@
 import * as React from "react"
 import Layout from "../components/layout"
-import { motion, useSpring } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
+import { navigate } from "gatsby";
 
-const Loader = ({setLoading}) => {
+const Intro = () => {
+
 
     const loadingDiv = {
         hidden: {
@@ -89,56 +91,63 @@ const Loader = ({setLoading}) => {
         }
     }
 
-    {setTimeout(() => {
-        setLoading(false)
-    }, 4000)}
+
+    setTimeout(() => {
+            navigate("/")
+    }, 4000)
+
+
+    
 
 
 
     return (
-        <Layout>
-            <motion.div className="loadingPage">
-                <motion.div 
-                variants={loadingDiv}
-                
-                initial="hidden"
-                animate="show"
-                exit="exit" 
-                className="loadingContainer">
-                    <motion.div
-                    className="loadingCircle"
-                    variants={loadingCircle}
+        <AnimatePresence>
+            <Layout>
+                    <motion.div className="loadingPage">
+                    <motion.div 
+                    variants={loadingDiv}
+                    
                     initial="hidden"
                     animate="show"
                     exit="exit" 
-                    
-                    >
+                    className="loadingContainer">
                         <motion.div
-                        className="loadingText"
-                        variants={loadingText}
-                            initial="hidden"
-                            animate="show"
-                            exit="exit" 
-                        >a</motion.div>
-                        <div className="loadingWelcomeContainer">
-                            <motion.div 
-                            variants={loadingCircleText}
-                            initial="hidden"
-                            animate="show"
-                            exit="exit" 
-                            className="loadingWelcome">
-                            </motion.div>
-                        </div>
+                        className="loadingCircle"
+                        variants={loadingCircle}
+                        initial="hidden"
+                        animate="show"
+                        exit="exit" 
                         
-                        {/*<motion.div
-                        className="loadingPicture"
-                        ></motion.div>*/}
+                        >
+                            <motion.div
+                            className="loadingText"
+                            variants={loadingText}
+                                initial="hidden"
+                                animate="show"
+                                exit="exit" 
+                            >a</motion.div>
+                            <div className="loadingWelcomeContainer">
+                                <motion.div 
+                                variants={loadingCircleText}
+                                initial="hidden"
+                                animate="show"
+                                exit="exit" 
+                                className="loadingWelcome">
+                                </motion.div>
+                            </div>
+                            
+                            {/*<motion.div
+                            className="loadingPicture"
+                            ></motion.div>*/}
+                        </motion.div>
                     </motion.div>
+                
                 </motion.div>
-               
-            </motion.div>
-        </Layout>
+            </Layout>
+            
+        </AnimatePresence>
     )
 }
 
-export default Loader
+export default Intro
