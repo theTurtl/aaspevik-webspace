@@ -6,6 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@fontsource/quicksand": "^4.5.11",
+    "framer-motion": "^7.6.16",
     "gatsby": "^4.24.4",
     "gatsby-omni-font-loader": "^2.0.2",
     "gatsby-plugin-image": "^2.24.0",

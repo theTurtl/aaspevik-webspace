@@ -7,6 +7,7 @@ import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 import NavBar from "../components/NavBar"
 import { Helmet } from "react-helmet"
+import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion"
 
 
 const IndexPage = () => { 
@@ -15,23 +16,14 @@ const IndexPage = () => {
   const top = React.useRef(null);
   const [isVisible, setIsVisible] = React.useState(true);
   const [pageActive, setPageActive] = React.useState("inherit");
+  const [loading, setLoading] = React.useState(true);
+
 
 
   const nextPageClick = () => {
     setIsVisible(false);
     ref.current?.scrollIntoView({behavior: 'smooth'});
   }
-
-  const topPageClick = () => {
-    top.current?.scrollIntoView({behavior: 'smooth'});
-  }
-
-  const toKnowledgeClick = () => {
-    navigate('/AboutMe')
-    ref.current?.scrollIntoView({behavior: 'smooth'});
-  }
-
-
 
   const hidePage = () => {
     if (pageActive === "inherit") {
@@ -46,12 +38,16 @@ const IndexPage = () => {
   }
 
 
+
+
   return (
   <Layout>
     <Helmet>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
   </Helmet>
-    <Seo title="Hjem" />
+  <Seo title="Hjem" />
+  <AnimateSharedLayout type="crossfade">
+    <AnimatePresence>    
     <NavBar isFrontActive={true} pageHider={hidePage}/>
     <div className="scrollContainer" style={{display: pageActive}}>
       <div className="landingPageHeroView scrollSnap" ref={top} >
@@ -270,7 +266,8 @@ const IndexPage = () => {
         </div>
       </div>
     </div>
-    
+    </AnimatePresence>
+  </AnimateSharedLayout>
   </Layout>
   )
 }
