@@ -485,6 +485,7 @@ span {
 	width: 600px;
 	height: 600px;
 	float: right;
+	transform: rotate(var(--rotate));
 }
 
 .frontPicture {
