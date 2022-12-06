@@ -44,7 +44,7 @@ const Intro = () => {
             width: 0,
             height: 0,
             transition: {delay: 0},
-            duration: 2
+            duration: 1
         }
     }
 

@@ -66,6 +66,8 @@ table {
 	font-family: 'Quicksand', sans-serif;
 }
 
+
+
 /* ------------ Scrollbar ------------ */
 
 	::-webkit-scrollbar-track {
@@ -87,6 +89,7 @@ table {
 
 .scrollContainer {
 	scroll-snap-type: y mandatory;
+	
 }
 
 .scrollSnap {

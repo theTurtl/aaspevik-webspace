@@ -52,8 +52,11 @@ const IndexPage = () => {
   <AnimateSharedLayout type="crossfade">
     <AnimatePresence>    
     <NavBar isFrontActive={true} pageHider={hidePage}/>
-    <div className="scrollContainer" style={{display: pageActive}} >
-      <div className="landingPageHeroView scrollSnap" ref={top} >
+    
+      <motion.div className="landingPageHeroView scrollSnap" ref={top} 
+      initial={{y: 100, opacity: 0}}
+      animate={{y: 0, opacity: 1, duration: 1}}
+      >
         
         
         
@@ -90,7 +93,7 @@ const IndexPage = () => {
           </div>
         </div>
         <div className="nextButton" onClick={nextPageClick}></div>
-      </div>
+      </motion.div>
 
       <div className="myKnowledgeSection" ref={ref}>
         <div className="myKnowledgeContainer">
@@ -268,7 +271,6 @@ const IndexPage = () => {
           </div>
         </div>
       </div>
-    </div>
     </AnimatePresence>
   </AnimateSharedLayout>
   </Layout>
