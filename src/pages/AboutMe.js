@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { motion } from "framer-motion"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -22,7 +23,10 @@ const AboutMe = () => {
   <Layout>
     <Seo title="Om meg" />
     <NavBar isFrontActive={false} pageHider={hidePage} />
-    <div className="aboutMePage" style={{display: pageActive}}>
+    <motion.div className="aboutMePage" style={{display: pageActive}}
+    initial={{y: 100, opacity: 0}}
+    animate={{y: 0, opacity: 1, duration: 1}}
+    >
         
       
       <div className="aboutMeBanner">
@@ -93,11 +97,11 @@ const AboutMe = () => {
               <p>Mine interesser</p>
               <div className="pointsField">
               </div>
-  </div>*/}
+            </div>*/}
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
     <div className="footerSection">
       <div className="footerContainer">
         <div className="footerLeft">
