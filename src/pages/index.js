@@ -40,6 +40,9 @@ const IndexPage = () => {
 
 
 
+
+
+
   return (
   <Layout>
     <Helmet>
@@ -49,7 +52,7 @@ const IndexPage = () => {
   <AnimateSharedLayout type="crossfade">
     <AnimatePresence>    
     <NavBar isFrontActive={true} pageHider={hidePage}/>
-    <div className="scrollContainer" style={{display: pageActive}}>
+    <div className="scrollContainer" style={{display: pageActive}} >
       <div className="landingPageHeroView scrollSnap" ref={top} >
         
         
@@ -76,7 +79,7 @@ const IndexPage = () => {
               </div>
             </div>
           </div>
-          <div className="frontPortrait">
+          <div className="frontPortrait" >
             <div className="frontPicture"></div>
             
             {/*<Link to="/AboutMe">
