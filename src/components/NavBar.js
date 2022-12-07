@@ -49,8 +49,8 @@ const NavBar = ({click, isFrontActive, pageHider}) => {
               <motion.div className="mobileNav" style={{display: mobileNavActive}}
               key="mobileNav"
               initial={{x: 1000, opacity: 1}}
-              animate={{x: 0, opacity: 1, duration: 1.5, transition: {delay:1}}}
-              exit={{x:1000, transition: {delay: 1}}}
+              animate={{x: 0, opacity: 1, duration: 1.5}}
+              exit={{x:1000}}
               >
                 <div className="topMobileNav">
                   <div className="exitMobileNav" onClick={mobileNavSwitch}></div>
