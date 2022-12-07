@@ -1215,7 +1215,7 @@ span {
 	position: relative;
 	display: flex;
 	align-content: space-between;
-	margin: 80px 32px;
+	margin: 20px 32px;
 }
 
 .mobileMenu:hover {
