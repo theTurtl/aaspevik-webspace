@@ -2,6 +2,7 @@ import React from "react";
 import { Link, navigate } from "gatsby";
 import Layout from "./layout";
 import { useState } from "react";
+import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
 
 
 const NavBar = ({click, isFrontActive, pageHider}) => {
@@ -41,46 +42,57 @@ const NavBar = ({click, isFrontActive, pageHider}) => {
 
     return (
         <Layout>
-          <div className="mobileNav" style={{display: mobileNavActive}}>
-            <div className="topMobileNav">
-              <div className="exitMobileNav" onClick={mobileNavSwitch}></div>
-              <div className="mobileStatusBar">
-                  <p>Ledig</p>
-                  <div className="okIcon"></div>
-              </div>
-            </div>
-            <div className="mobileNavLinks">
-              
-              <p onClick={routeToAbout}>Om meg</p>
-              
-              <p onClick={routeToFrontpage}>Forside</p>
-              <a href="mailto:adrian@aspevik.com" style={{color: 'inherit', textDecoration: 'none'}}>
-                <p>Kontakt</p>
-              </a>
-            </div>
-            <div className="mobileSocials">
-              <div className="linkIcons">
-                <a href="https://www.linkedin.com/in/adrian-aspevik-037aa117a" target={"_blank"}>
-                  <div className="mobileLinkd"></div>
-                </a>
-                <a href="https://github.com/theTurtl/aaspevik-webspace" target={"_blank"}>
-                  <div className="mobileGit"></div>
-                </a>
-              </div>
-              <a href="mailto:adrian@aspevik.com" style={{color: 'inherit', textDecoration: 'none'}}>
-                <div className="contactMobile">
-                  <p>adrian@aspevik.com</p>
-                  <div className="mobileAccentLine"></div>
+          <AnimateSharedLayout>
+            <AnimatePresence>
+
+            
+              <motion.div className="mobileNav" style={{display: mobileNavActive}}
+              key="mobileNav"
+              initial={{x: 1000, opacity: 1}}
+              animate={{x: 0, opacity: 1, duration: 1.5, transition: {delay:1}}}
+              exit={{x:1000, transition: {delay: 1}}}
+              >
+                <div className="topMobileNav">
+                  <div className="exitMobileNav" onClick={mobileNavSwitch}></div>
+                  <div className="mobileStatusBar">
+                      <p>Ledig</p>
+                      <div className="okIcon"></div>
+                  </div>
                 </div>
-              </a>
-              <a href="tel:+4799250743" style={{color: 'inherit', textDecoration: 'none'}}>
-                <div className="contactMobile">
-                  <p>+47 992 50 743</p>
-                  <div className="mobileAccentLine"></div>
+                <div className="mobileNavLinks">
+                  
+                  <p onClick={routeToAbout}>Om meg</p>
+                  
+                  <p onClick={routeToFrontpage}>Forside</p>
+                  <a href="mailto:adrian@aspevik.com" style={{color: 'inherit', textDecoration: 'none'}}>
+                    <p>Kontakt</p>
+                  </a>
                 </div>
-              </a>
-            </div>
-          </div>
+                <div className="mobileSocials">
+                  <div className="linkIcons">
+                    <a href="https://www.linkedin.com/in/adrian-aspevik-037aa117a" target={"_blank"}>
+                      <div className="mobileLinkd"></div>
+                    </a>
+                    <a href="https://github.com/theTurtl/aaspevik-webspace" target={"_blank"}>
+                      <div className="mobileGit"></div>
+                    </a>
+                  </div>
+                  <a href="mailto:adrian@aspevik.com" style={{color: 'inherit', textDecoration: 'none'}}>
+                    <div className="contactMobile">
+                      <p>adrian@aspevik.com</p>
+                      <div className="mobileAccentLine"></div>
+                    </div>
+                  </a>
+                  <a href="tel:+4799250743" style={{color: 'inherit', textDecoration: 'none'}}>
+                    <div className="contactMobile">
+                      <p>+47 992 50 743</p>
+                      <div className="mobileAccentLine"></div>
+                    </div>
+                  </a>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </AnimateSharedLayout>
             <div className="landingPageNavBar">
                 <div className="navLeft">
                     <Link to="/" style={{textDecoration: 'none'}}>
