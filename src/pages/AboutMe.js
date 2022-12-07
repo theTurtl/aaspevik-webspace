@@ -107,10 +107,12 @@ const AboutMe = () => {
         <div className="footerLeft">
           <h6>© 2022, bygget<br/>og designet av</h6>
           <p>Adrian<br/>Aspevik</p>
-          <div className="sourceCodeButton">
-            <p>Kildekode</p>
-            <div className="gitHubIcon"></div>
-          </div>
+          <a href="https://github.com/theTurtl/aaspevik-webspace" target={"_blank"}>
+            <div className="sourceCodeButton">
+              <p>Kildekode</p>
+              <div className="gitHubIcon"></div>
+            </div>
+          </a>
         </div>
         <div className="footerMiddle">
           <a href="mailto:adrian@aspevik.com" style={{textDecoration: 'none'}}>
