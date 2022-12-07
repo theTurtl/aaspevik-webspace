@@ -36,7 +36,7 @@ const AboutMe = () => {
           hvordan jeg endte opp med frontend og<br/>mobilutvikling.</h6>
           <div className="introductionButtons">
             <div className="downloadCV">
-              <p>Last ned CV</p>
+              <p>Forside</p>
             </div>
             <div className="portfolio">
               <div className="arrivingSoon">
@@ -107,7 +107,7 @@ const AboutMe = () => {
         <div className="footerLeft">
           <h6>© 2022, bygget<br/>og designet av</h6>
           <p>Adrian<br/>Aspevik</p>
-          <a href="https://github.com/theTurtl/aaspevik-webspace" target={"_blank"}>
+          <a href="https://github.com/theTurtl/aaspevik-webspace" target={"_blank"} style={{textDecoration: 'none'}}>
             <div className="sourceCodeButton">
               <p>Kildekode</p>
               <div className="gitHubIcon"></div>
