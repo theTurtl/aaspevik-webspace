@@ -64,14 +64,13 @@ table {
 	--minHeight: 880px;
 	background-color: var(--white);
 	font-family: 'Quicksand', sans-serif;
+	cursor: 
 }
 
 
 
 /* ------------ Scrollbar ------------ */
 
-	::-webkit-scrollbar-track {
-	}
 
 	::-webkit-scrollbar {
 		position: absolute;
@@ -379,7 +378,6 @@ table {
 	width: 56px;
 	height: 56px;
 	visibility: hidden;
-
 	
 }
 
@@ -1211,6 +1209,7 @@ span {
 	background-color: var(--white);
 	z-index: 10;
 }
+
 
 .topMobileNav {
 	position: relative;
