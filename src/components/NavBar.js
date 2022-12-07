@@ -23,21 +23,33 @@ const NavBar = ({click, isFrontActive, pageHider}) => {
     const mobileNavSwitch = () => {
         if (mobileNavActive === "none") {
           setMobileNavActive("");
-          pageHider()
         } else {
           setMobileNavActive("none");
-          pageHider()
+          
         }
       }
 
+
       const routeToAbout = () => {
+        const path = window.location.pathname
         navigate("/AboutMe");
-        pageHider();
+        if(path === "/AboutMe"){
+          setMobileNavActive("none")
+        } else {
+          pageHider();
+        }
+        
       }
 
       const routeToFrontpage = () => {
+        const path = window.location.pathname
         navigate("/")
-        pageHider();
+        if(path === "/") {
+          setMobileNavActive("none")
+        } else {
+          pageHider();
+        }
+        
       }
 
     return (
@@ -60,10 +72,8 @@ const NavBar = ({click, isFrontActive, pageHider}) => {
                   </div>
                 </div>
                 <div className="mobileNavLinks">
-                  
-                  <p onClick={routeToAbout}>Om meg</p>
-                  
                   <p onClick={routeToFrontpage}>Forside</p>
+                  <p onClick={routeToAbout}>Om meg</p>
                   <a href="mailto:adrian@aspevik.com" style={{color: 'inherit', textDecoration: 'none'}}>
                     <p>Kontakt</p>
                   </a>
