@@ -2477,7 +2477,7 @@ span {
 	}*/
 }
 
-@media screen and (max-width: 1218px) {
+@media screen and (max-width: 1348px) {
 
 	.didYouKnowContainer {
 		flex-direction: column;
@@ -2508,7 +2508,7 @@ span {
 
 	.didYouText p {
 		max-width: 460px;
-		margin-bottom: -32px;
+		margin-bottom: -64px;
 	}
 
 	.navMiddle {

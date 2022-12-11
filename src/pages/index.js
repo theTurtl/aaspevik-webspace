@@ -147,9 +147,8 @@ const IndexPage = () => {
             <div className="didYouKnowContainer">
               <div className="didYouText">
                 <h6>Visste du at...</h6>
-                <p>Gjennom design og en god brukeropplevelse vil en kunne formidle
-                  og danne et bedre forhold med målgruppen din? Design og brukeropplevelse 
-                  beskrives ofte som en nøkkelfaktor for...
+                <p><strong style={{fontWeight: 900, marginLeft: 0}}>web-design kan være avgjørende for en bedrifts suksess?</strong> Uansett hvilken type bedrift du driver, 
+                kan god web-design være viktig for å øke trafikken og konverteringen til bedriften din.
                 </p>
               </div>
               <div className="statBoxesContainer">
