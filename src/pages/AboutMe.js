@@ -57,19 +57,42 @@ const AboutMe = () => {
           <div className="whoAmILeft">
             <div className="partOne">
               <h6>En introduksjon</h6>
-              <p>Jeg er en grafisk designer og frontend utvikler som er veldig interessert i 
-
+              <p>Møt Adrian, en programmerer og grafisk designer som bruker dagene på å skrive 
+                på datamaskinen og nettene med å stirre på et tomt lerret, på jakt etter 
+                inspirasjon. Med en forkjærlighet for både teknologi og kunst, har han funnet 
+                en måte å slå sammen lidenskapene sine ved å skape digitale kreasjoner.<br/><br/>Når 
+                han ikke er opptatt med å løse kodeproblemer eller bringe sine kunstneriske 
+                visjoner ut i livet, kan du finne ham hengi seg til sin hemmelige kjærlighet 
+                for cheesy sitcoms fra 90-tallet.
               </p>
             </div>
             <div className="partTwo">
-              <h6>Part 1</h6>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
-                sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+              <h6>Som utvikler og kollega</h6>
+              <p>har han et stort engasjement for å skape nye produkter og tjenester som er både 
+                visuelt og funksjonelt tiltalende. Han er også fokusert og dedikert til sine 
+                prosjekter og har et sterkt ønske om å lykkes.<br/><br/>
+                
+                Som kollega er Adrian alltid klar til å hjelpe andre, spesielt når det gjelder design. 
+                Med sin optimistiske personlighet, vil han være lett å jobbe med. Han er 
+                også vennlig og respekterer andres ideer.</p>
             </div>
             <div className="partThree">
-              <h6>Part 1</h6>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
-                sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+              <h6>Som person</h6>
+              <p>har han alltid vært optimistisk. Han prøver alltid å se det gode i ting og 
+                sliter ikke med å se mulighetene som ligger i situasjoner. Han er også en 
+                eventyrlystig type som elsker å utforske nye steder, oppleve nye ting og møte 
+                nye mennesker.<br/><br/>
+
+                Design og kreativitet er også en stor del av Adrians liv. Han elsker å skape ting 
+                og er alltid på jakt etter nye ideer å utforske. Han er alltid ivrig etter å lære 
+                nye ting og å utvikle sine kreative ferdigheter.<br/><br/>
+
+                Natur er noe Adrian virkelig setter pris på. Han elsker å tilbringe tid utendørs 
+                og følger ofte oppdagelsesreiser for å utforske utsiktene og opplevelsen.<br/><br/>
+
+                Meditasjon er også en viktig del av Adrians liv. Han bruker ofte tid på å 
+                meditere og forbinde seg til øyeblikket. Dette hjelper ham med å føle seg mer 
+                fokusert, energisk og avslappet.</p>
             </div>
           </div>
           <div className="whoAmIRight">
