@@ -4,7 +4,7 @@ module.exports = {
     description: `Mitt navn er Adrian Aspevik, og jeg er en grafisk designer og frontend utvikler basert i Bergen.`,
     author: `@adrianaspevik`,
     image: `src/images/favicon.svg`,
-    siteUrl: `https://www.adrianaspevik.com/`,
+    siteUrl: `https://www.aspevik.com/`,
   },
   plugins: [
     `gatsby-plugin-image`,

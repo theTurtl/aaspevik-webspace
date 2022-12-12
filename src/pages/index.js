@@ -251,9 +251,8 @@ export const Head = () => <Seo title="Adrian Aspevik">
       "@type": "LocalBusiness",
       "name": "Adrian Aspevik",
       "description": "Jeg tilbyr tjenester innen design og programvareutvikling",
-      "url": "https://adrianaspevik.com",
-      "logo": "https://adrianaspevik.com/logo.png",
-      "image": "https://adrianaspevik.com/hero.jpg",
+      "url": "https://aspevik.com",
+      "logo": "https://aspevik.com/logo.png",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Bergen",
