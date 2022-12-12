@@ -97,6 +97,7 @@ const AboutMe = () => {
             </div>
           </div>
           <div className="whoAmIRight">
+            {/*
             <div className="quoteSection">
               <div className="quoteHeader">
                 <div className="headerIllustration"></div>
@@ -108,6 +109,7 @@ const AboutMe = () => {
               <p>"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
                 sed diam nonummy nibh euismod tincidunt ut laoreet."</p>
             </div>
+            */}
             <div className="statusSection">
               <div className="statusHeader">
                 <p>Status</p>
