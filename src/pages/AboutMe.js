@@ -33,8 +33,8 @@ const AboutMe = () => {
       <div className="aboutMeBanner">
         <div className="aboutMeBannerLeft">
           <h5>Heisann :)</h5>
-          <h6>Her står det litt om hvem jeg er, og<br/>
-          hvordan jeg endte opp med frontend og<br/>mobilutvikling.</h6>
+          <h6>Her står det litt om hvem jeg er, og
+          hvordan jeg endte opp med frontend og mobilutvikling.</h6>
           <div className="introductionButtons">
             <div className="downloadCV">
               <p>Forside</p>

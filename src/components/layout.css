@@ -1064,7 +1064,8 @@ span {
 .aboutMeBannerLeft h6 {
 	font-size: 20px;
 	line-height: 1.4;
-	margin-bottom: -16px;
+	margin-bottom: 16px;
+	max-width: 600px;
 }
 
 .aboutMeBannerLeft {
