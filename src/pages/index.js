@@ -243,6 +243,47 @@ const IndexPage = () => {
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="Adrian Aspevik" />
+export const Head = () => <Seo title="Adrian Aspevik">
+  <script type="application/ld+json">
+  {`
+    {
+      "@context": "http://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Adrian Aspevik",
+      "description": "Jeg tilbyr tjenester innen design og programvareutvikling",
+      "url": "https://adrianaspevik.com",
+      "logo": "https://adrianaspevik.com/logo.png",
+      "image": "https://adrianaspevik.com/hero.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bergen",
+        "addressRegion": "Vestlandet",
+        "postalCode": "5146",
+        "addressCountry": "NO"
+      },
+      "openingHoursSpecification":
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:00",
+          "closes": "17:00"
+        },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+4799250743",
+        "email": "adrian@aspevik.com",
+        "contactType": "Customer Service"
+      }
+    }
+  `}
+</script>
+  </Seo>
 
 export default IndexPage
