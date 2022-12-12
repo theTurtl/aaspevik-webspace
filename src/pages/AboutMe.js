@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import NavBar from "../components/NavBar"
+import Footer from "../components/Footer"
 
 const AboutMe = () => {
 
@@ -32,8 +33,8 @@ const AboutMe = () => {
       <div className="aboutMeBanner">
         <div className="aboutMeBannerLeft">
           <h5>Heisann :)</h5>
-          <h6>Her står det litt om hvem jeg er, og<br/>
-          hvordan jeg endte opp med frontend og<br/>mobilutvikling.</h6>
+          <h6>Her står det litt om hvem jeg er, og
+          hvordan jeg endte opp med frontend og mobilutvikling.</h6>
           <div className="introductionButtons">
             <div className="downloadCV">
               <p>Forside</p>
@@ -96,6 +97,7 @@ const AboutMe = () => {
             </div>
           </div>
           <div className="whoAmIRight">
+            {/*
             <div className="quoteSection">
               <div className="quoteHeader">
                 <div className="headerIllustration"></div>
@@ -107,6 +109,7 @@ const AboutMe = () => {
               <p>"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
                 sed diam nonummy nibh euismod tincidunt ut laoreet."</p>
             </div>
+            */}
             <div className="statusSection">
               <div className="statusHeader">
                 <p>Status</p>
@@ -125,46 +128,7 @@ const AboutMe = () => {
         </div>
       </div>
     </motion.div>
-    <div className="footerSection">
-      <div className="footerContainer">
-        <div className="footerLeft">
-          <h6>© 2022, bygget<br/>og designet av</h6>
-          <p>Adrian<br/>Aspevik</p>
-          <a href="https://github.com/theTurtl/aaspevik-webspace" target={"_blank"} style={{textDecoration: 'none'}}>
-            <div className="sourceCodeButton">
-              <p>Kildekode</p>
-              <div className="gitHubIcon"></div>
-            </div>
-          </a>
-        </div>
-        <div className="footerMiddle">
-          <a href="mailto:adrian@aspevik.com" style={{textDecoration: 'none'}}>
-            <div className="footerEmail">
-              <p>adrian@aspevik.com</p>
-              <div className="footerLine"></div>
-            </div>
-          </a>
-          <a href="tel:+4799250743" style={{textDecoration: 'none'}}>
-            <div className="footerNumber" >
-              <p>+47 992 50 743</p>
-              <div className="footerLine"></div>
-            </div>
-          </a>
-        </div>
-        <div className="footerRight">
-          <p>Linker</p>
-          <div className="linksFlex">
-            <a href="https://www.linkedin.com/in/adrian-aspevik-037aa117a" target={"_blank"}>
-              <div className="footerLinkedin"></div>
-            </a>
-            <a href="https://github.com/theTurtl/aaspevik-webspace" target={"_blank"}>
-              <div className="footerGit"></div>
-            </a>
-          </div>
-          
-        </div>
-      </div>
-    </div>
+    <Footer />
   </Layout>
   )
 }

@@ -23,9 +23,17 @@ const NavBar = ({click, isFrontActive, pageHider}) => {
     const mobileNavSwitch = () => {
         if (mobileNavActive === "none") {
           setMobileNavActive("");
+          pageHider();
         } else {
           setMobileNavActive("none");
           
+        }
+      }
+
+      const exitMobileNav = () => {
+        if(mobileNavActive === ""){
+          setMobileNavActive("none")
+          pageHider()
         }
       }
 
@@ -35,6 +43,7 @@ const NavBar = ({click, isFrontActive, pageHider}) => {
         navigate("/AboutMe");
         if(path === "/AboutMe"){
           setMobileNavActive("none")
+          pageHider()
         } else {
           pageHider();
         }
@@ -46,6 +55,7 @@ const NavBar = ({click, isFrontActive, pageHider}) => {
         navigate("/")
         if(path === "/") {
           setMobileNavActive("none")
+          pageHider()
         } else {
           pageHider();
         }
@@ -65,7 +75,7 @@ const NavBar = ({click, isFrontActive, pageHider}) => {
               exit={{x:1000}}
               >
                 <div className="topMobileNav">
-                  <div className="exitMobileNav" onClick={mobileNavSwitch}></div>
+                  <div className="exitMobileNav" onClick={exitMobileNav}></div>
                   <div className="mobileStatusBar">
                       <p>Ledig</p>
                       <div className="okIcon"></div>

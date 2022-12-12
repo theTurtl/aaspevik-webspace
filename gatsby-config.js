@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Adrian Aspevik`,
-    description: `En grafisk designer og frontend utvikler basert i Bergen.`,
+    description: `Mitt navn er Adrian Aspevik, og jeg er en grafisk designer og frontend utvikler basert i Bergen.`,
     author: `@adrianaspevik`,
-    siteUrl: `https://aspevik.com/`,
+    siteUrl: `https://www.adrianaspevik.com/`,
   },
   plugins: [
     `gatsby-plugin-image`,

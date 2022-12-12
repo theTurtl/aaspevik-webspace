@@ -1064,7 +1064,8 @@ span {
 .aboutMeBannerLeft h6 {
 	font-size: 20px;
 	line-height: 1.4;
-	margin-bottom: -16px;
+	margin-bottom: 16px;
+	max-width: 600px;
 }
 
 .aboutMeBannerLeft {
@@ -1106,13 +1107,13 @@ span {
 
 .partOne h6, .partTwo h6, .partThree h6 {
 	font-size: 28px;
-	font-weight: 500;
+	font-weight: 700;
 	margin-bottom: 24px;
 }
 
 .partOne, .partTwo, .partThree {
 	padding: 32px;
-	background-color: var(--whitefaded);
+	/*background-color: var(--whitefaded);*/
 	border-radius: 36px;
 	margin-bottom: 24px;
 }
@@ -1129,7 +1130,7 @@ span {
 .quoteSection {
 	background-color: var(--blackfade);
 	padding: 32px;
-	
+	min-width: 272px;
 	color: var(--white);
 	font-size: 20px;
 	line-height: 1.4;
@@ -2508,7 +2509,7 @@ span {
 
 	.didYouText p {
 		max-width: 460px;
-		margin-bottom: -64px;
+		margin-bottom: -32px;
 	}
 
 	.navMiddle {
